@@ -1,1 +1,5 @@
 const form=document.getElementById('audit-form');const statusEl=document.getElementById('form-status');if(form){const inbox=['upw','amzn','@gmail.com'].join('');form.action='https://formsubmit.co/'+inbox;form.addEventListener('submit',()=>{const button=form.querySelector('button[type="submit"]');if(button){button.disabled=true;button.textContent='Talep gönderiliyor…';}if(statusEl)statusEl.textContent='Güvenli gönderim başlatıldı…';});}
+
+// Product-truth guard: supported engines and the actually measured engines are not the same claim.
+const engineRow=document.querySelector('.engine-row');if(engineRow){engineRow.setAttribute('aria-label','Desteklenen yapay zekâ platformları');const note=document.createElement('p');note.className='illustrative';note.textContent='Canlı pilot ölçüm kapsamı sağlayıcı erişimine göre raporda açıkça belirtilir. Ölçülmeyen motorlar 0 puan sayılmaz veya tahmini sonuçla doldurulmaz.';engineRow.insertAdjacentElement('afterend',note);}
+document.querySelectorAll('.price-card li').forEach((li)=>{if(li.textContent.trim()==='3 yapay zekâ sistemi'){li.textContent='Aktif AI sağlayıcıları; ölçüm kapsamı raporda açıkça belirtilir';}});
