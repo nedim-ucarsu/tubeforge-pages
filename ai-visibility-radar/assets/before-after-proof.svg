@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="t d">
+<title id="t">Önce ve sonra AI görünürlük karşılaştırması</title>
+<desc id="d">Temsili bir markanın yapay zekâ cevabında önce görünmemesi, düzeltmelerden sonra öneriler arasında yer alması ve görünürlük metriklerinin iyileşmesini gösterir.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#091729"/><stop offset="1" stop-color="#0f2946"/></linearGradient><linearGradient id="g" x1="0" x2="1"><stop stop-color="#63e6be"/><stop offset="1" stop-color="#74c0fc"/></linearGradient></defs>
+<rect width="1200" height="560" rx="32" fill="url(#bg)"/>
+<text x="60" y="62" fill="#eef6ff" font-family="Arial,sans-serif" font-size="30" font-weight="700">Aynı sorgu. Aynı marka. Önce ve sonra.</text>
+<text x="60" y="92" fill="#9fb0c6" font-family="Arial,sans-serif" font-size="16">Düzeltmelerin etkisini aynı benchmark sorgularıyla yeniden ölçüyoruz.</text>
+
+<g font-family="Arial,sans-serif">
+<text x="80" y="145" fill="#9fb0c6" font-size="15" font-weight="700">ÖNCE</text>
+<rect x="60" y="165" width="430" height="285" rx="22" fill="#0f1d31" stroke="#334d69"/>
+<rect x="84" y="194" width="382" height="46" rx="12" fill="#142944"/><text x="104" y="223" fill="#dcecff" font-size="17">“Ankara'da iyi dönerci öner.”</text>
+<rect x="84" y="258" width="382" height="50" rx="12" fill="#152a41"/><text x="105" y="289" fill="#eef6ff" font-size="17">1. Rakip Marka A</text>
+<rect x="84" y="319" width="382" height="50" rx="12" fill="#152a41"/><text x="105" y="350" fill="#eef6ff" font-size="17">2. Rakip Marka B</text>
+<rect x="84" y="380" width="382" height="44" rx="12" fill="#2a1e27"/><text x="105" y="408" fill="#ffaaaa" font-size="16">Sizin markanız: görünmüyor</text>
+
+<text x="710" y="145" fill="#63e6be" font-size="15" font-weight="700">SONRA</text>
+<rect x="690" y="165" width="450" height="285" rx="22" fill="#0f1d31" stroke="#63e6be" stroke-opacity=".55"/>
+<rect x="714" y="194" width="402" height="46" rx="12" fill="#142944"/><text x="734" y="223" fill="#dcecff" font-size="17">“Ankara'da iyi dönerci öner.”</text>
+<rect x="714" y="258" width="402" height="58" rx="12" fill="#163731" stroke="#63e6be" stroke-opacity=".6"/><circle cx="741" cy="287" r="11" fill="#63e6be"/><text x="765" y="292" fill="#effff9" font-size="18" font-weight="700">1. Sizin markanız</text>
+<rect x="714" y="327" width="402" height="50" rx="12" fill="#152a41"/><text x="735" y="358" fill="#eef6ff" font-size="17">2. Rakip Marka A</text>
+<rect x="714" y="388" width="402" height="36" rx="10" fill="#152a41"/><text x="735" y="412" fill="#9fb0c6" font-size="15">3. Rakip Marka B</text>
+
+<path d="M528 308 C575 308 604 308 646 308" stroke="url(#g)" stroke-width="6" fill="none"/><path d="M635 295 L655 308 L635 321" fill="none" stroke="#63e6be" stroke-width="6" stroke-linecap="round"/>
+
+<rect x="60" y="478" width="1080" height="50" rx="16" fill="#10263f"/>
+<text x="88" y="509" fill="#9fb0c6" font-size="14">Temsili örnek:</text>
+<text x="206" y="509" fill="#eef6ff" font-size="15" font-weight="700">Görünme %23 → %47</text>
+<text x="430" y="509" fill="#eef6ff" font-size="15" font-weight="700">Önerilme %13 → %34</text>
+<text x="674" y="509" fill="#eef6ff" font-size="15" font-weight="700">Kör noktalar 17 → 8</text>
+<text x="924" y="509" fill="#63e6be" font-size="15" font-weight="700">Sonuç: tekrar ölçülür</text>
+</g>
+</svg>
