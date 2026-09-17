@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI Visibility Radar, markanızın ChatGPT, Gemini ve Perplexity gibi yapay zekâ sistemlerinde ne kadar görünür olduğunu, hangi rakiplerin önerildiğini ve bu önerileri hangi kaynakların etkilediğini ölçer." />
+  <meta name="description" content="AI Visibility Radar; markanızın yapay zekâ cevaplarında neden görünmediğini teşhis eder, rakip ve kaynak farkını gösterir, düzeltme planı üretir ve sonucu yeniden ölçer." />
   <meta name="theme-color" content="#07111f" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>AI Visibility Radar — Yapay zekâ kimi öneriyor?</title>
-  <link rel="stylesheet" href="./styles.css?v=tr-20260916-3" />
+  <title>AI Visibility Radar — Ölç, Teşhis Et, Düzelt, Tekrar Ölç</title>
+  <link rel="stylesheet" href="./styles.css?v=tr-20260918-1" />
 </head>
 <body>
   <header class="nav shell">
@@ -19,94 +19,202 @@
     </a>
     <nav class="nav-links" aria-label="Ana menü">
       <a href="#how">Nasıl çalışır?</a>
-      <a href="#report">Rapor</a>
-      <a href="#pricing">Fiyatlandırma</a>
+      <a href="#diagnosis">Teşhis</a>
+      <a href="#fix">Düzeltme</a>
+      <a href="#proof">Kanıt</a>
+      <a href="#pricing">Paketler</a>
       <a class="nav-cta" href="#free-check">Ücretsiz analiz</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero shell">
-      <div class="eyebrow">Yapay zekâ görünürlük ve rakip analizi</div>
-      <h1>Yapay zekâ sizi değil, rakiplerinizi mi öneriyor?</h1>
-      <p class="hero-copy">Markanızın yapay zekâ yanıtlarında ne kadar görünür olduğunu ölçün, hangi rakiplerin daha sık önerildiğini görün ve bu önerilerin arkasındaki kaynakları keşfedin.</p>
-      <div class="hero-actions">
-        <a class="button primary" href="#free-check">Ücretsiz mini analiz iste</a>
-        <a class="button secondary" href="./sample-report.html?v=tr-20260916-3">Örnek raporu gör</a>
-      </div>
-      <div class="engine-row" aria-label="Desteklenen yapay zekâ platformları">
-        <span>ChatGPT</span><span>Gemini</span><span>Perplexity</span>
-      </div>
-      <p class="illustrative">Canlı pilot ölçüm kapsamı sağlayıcı erişimine göre raporda açıkça belirtilir. Ölçülmeyen motorlar 0 puan sayılmaz veya tahmini sonuçla doldurulmaz.</p>
+      <div class="eyebrow">AI görünürlük optimizasyonu</div>
+      <h1>Yapay zekâ neden rakiplerinizi öneriyor?</h1>
+      <p class="hero-copy">Bunu ölçüyoruz, nedenini teşhis ediyoruz, düzeltmeleri uyguluyoruz ve aynı sorgularla sonucu tekrar doğruluyoruz.</p>
 
-      <div class="signal-card" aria-label="Örnek görünürlük özeti">
-        <div><span class="signal-label">Sizin görünürlüğünüz</span><strong>%17</strong></div>
-        <div class="signal-separator"></div>
-        <div><span class="signal-label">En güçlü rakip</span><strong>%58</strong></div>
-        <div class="signal-separator"></div>
-        <div><span class="signal-label">Önerilme farkı</span><strong>41 puan</strong></div>
+      <div class="hero-actions">
+        <a class="button primary" href="#free-check">Ücretsiz görünürlük kontrolü</a>
+        <a class="button secondary" href="./sample-report.html?v=tr-20260918-1">Teşhis raporu örneği</a>
       </div>
-      <p class="illustrative">Temsili örnektir. Gerçek sonuçlar sektör, sorgular, konum ve ölçüm tarihine göre değişir.</p>
+
+      <div class="engine-row" aria-label="Hedeflenen yapay zekâ ekosistemleri">
+        <span>ChatGPT</span><span>Google AI</span><span>Perplexity</span><span>Diğer AI aramaları</span>
+      </div>
+      <p class="illustrative">Aktif ölçüm kapsamı her raporda açıkça belirtilir. Ölçülmeyen motorlar sıfır sayılmaz ve tahmini sonuçla doldurulmaz.</p>
+
+      <div class="hero-console" aria-label="AI görünürlük örnek teşhis ekranı">
+        <div class="console-head">
+          <div><span class="status-dot"></span> Örnek teşhis</div>
+          <span class="console-tag">CANLI ÖLÇÜM MANTIĞI</span>
+        </div>
+        <div class="console-grid">
+          <div class="console-metric"><span>AI Görünürlüğü</span><strong>%23</strong><small>Marka görünme oranı</small></div>
+          <div class="console-metric"><span>Önerilme Oranı</span><strong>%13</strong><small>Tavsiye listesine girme</small></div>
+          <div class="console-metric"><span>Prominence</span><strong>P2</strong><small>Cevaptaki görünür konum</small></div>
+          <div class="console-metric"><span>Rakip Farkı</span><strong>-31</strong><small>Share of voice farkı</small></div>
+        </div>
+        <div class="diagnosis-strip"><b>Teşhis:</b> içerik boşluğu + entity tutarsızlığı + üçüncü taraf kaynak eksikliği</div>
+      </div>
+      <p class="illustrative">Yukarıdaki değerler temsili örnektir; gerçek müşteri sonucu değildir.</p>
     </section>
 
     <section class="section shell" id="how">
       <div class="section-heading">
-        <span class="kicker">Nasıl çalışır?</span>
-        <h2>Sorudan kanıta, kanıttan aksiyona.</h2>
-        <p>Satın alma niyeti taşıyan soruları test eder, marka ve rakip görünürlüğünü ölçer, kullanılan kaynakları kaydeder ve aradaki farkı uygulanabilir bir plana dönüştürürüz.</p>
+        <span class="kicker">Nihai çalışma modeli</span>
+        <h2>Ölç → Teşhis → Düzelt → Tekrar ölç.</h2>
+        <p>Amacımız yalnız rapor vermek değil; görünürlüğü engelleyen kök nedenleri bulup uygulanabilir şekilde gidermek ve değişimi ölçmektir.</p>
       </div>
-      <div class="steps">
-        <article class="card"><span class="step-no">01</span><h3>Sorgu setini oluştururuz</h3><p>Sektörünüze özel satın alma, öneri, karşılaştırma, güven, alternatif ve yerel arama soruları hazırlanır.</p></article>
-        <article class="card"><span class="step-no">02</span><h3>Yapay zekâ yanıtlarını ölçeriz</h3><p>Markanızın görünüp görünmediği, hangi rakiplerin öne çıktığı ve hangi kaynakların kullanıldığı analiz edilir.</p></article>
-        <article class="card"><span class="step-no">03</span><h3>Rakip farkını buluruz</h3><p>Rakiplerin önerildiği fakat markanızın görünmediği yüksek değerli sorgular ortaya çıkarılır.</p></article>
-        <article class="card"><span class="step-no">04</span><h3>Sonucu aksiyona çeviririz</h3><p>İçerik, marka varlığı, atıf ve otorite fırsatları ticari önemine göre önceliklendirilir.</p></article>
+
+      <div class="flow-grid">
+        <article class="flow-card"><span>01</span><h3>Discover</h3><p>Marka, sektör, konum, hizmetler, rakipler ve ticari arama niyetlerini çıkarırız.</p></article>
+        <article class="flow-card"><span>02</span><h3>Measure</h3><p>Gerçek kullanıcı niyetli sorgularda marka, rakip, öneri, citation ve görünür konum sinyallerini ölçeriz.</p></article>
+        <article class="flow-card"><span>03</span><h3>Diagnose</h3><p>Teknik, entity, içerik, otorite, citation, yerel veri ve güven problemlerini kök neden olarak sınıflandırırız.</p></article>
+        <article class="flow-card"><span>04</span><h3>Prescribe</h3><p>Her problem için kanıt, öncelik, beklenen sinyal ve uygulanacak düzeltme reçetesi oluştururuz.</p></article>
+        <article class="flow-card"><span>05</span><h3>Fix</h3><p>Mevcut siteyi düzeltir, içerik/schema/entity/citation çalışmalarını uygular; gerekiyorsa yeni AI-ready site üretiriz.</p></article>
+        <article class="flow-card"><span>06</span><h3>Verify</h3><p>Aynı benchmark sorgularıyla yeniden ölçer, önce/sonra farkını ve kalan kör noktaları raporlarız.</p></article>
       </div>
     </section>
 
-    <section class="section section-dark" id="report">
-      <div class="shell report-grid">
+    <section class="section section-dark" id="diagnosis">
+      <div class="shell split">
         <div class="section-heading left">
-          <span class="kicker">Ne teslim alırsınız?</span>
-          <h2>Sadece skor değil, karar verebileceğiniz kanıt.</h2>
-          <p>Her analiz, görünürlük farkının nerede oluştuğunu ve bu farkın arkasında hangi kaynakların bulunduğunu açıklar.</p>
-          <a class="text-link" href="./sample-report.html?v=tr-20260916-3">Örnek raporu aç →</a>
+          <span class="kicker">Root-cause diagnosis</span>
+          <h2>Sadece “görünmüyorsunuz” demiyoruz. Nedenini buluyoruz.</h2>
+          <p>Her müşteri aynı nedenle kaybetmez. Bu yüzden tek tip SEO listesi yerine gerçek ölçüm ve site verisine dayalı teşhis üretiriz.</p>
+          <a class="text-link" href="./sample-report.html?v=tr-20260918-1">Örnek teşhis raporunu aç →</a>
         </div>
-        <div class="metric-grid">
-          <div class="metric"><strong>AI Görünürlüğü</strong><span>Markanızın yanıtların ne kadarında göründüğü.</span></div>
-          <div class="metric"><strong>Görünürlük Payı</strong><span>Toplam marka görünürlüğündeki payınız.</span></div>
-          <div class="metric"><strong>Rakip Farkı</strong><span>Rakiplerin sizi hangi alanlarda geçtiği.</span></div>
-          <div class="metric"><strong>Kör Noktalar</strong><span>Değerli sorgularda markanızın kaybolduğu alanlar.</span></div>
-          <div class="metric"><strong>Kaynak Haritası</strong><span>AI önerilerini etkileyen web kaynakları.</span></div>
-          <div class="metric"><strong>Aksiyon Planı</strong><span>Kanıta dayalı, önceliklendirilmiş sonraki adımlar.</span></div>
+        <div class="diagnosis-grid">
+          <div class="diagnosis-card"><strong>Discoverability</strong><span>AI crawler ve arama sistemleri içeriğe ulaşabiliyor mu?</span></div>
+          <div class="diagnosis-card"><strong>Entity</strong><span>Marka, şubeler, hizmetler ve konumlar tutarlı biçimde anlaşılıyor mu?</span></div>
+          <div class="diagnosis-card"><strong>Relevance</strong><span>Site gerçek satın alma ve öneri sorgularını karşılıyor mu?</span></div>
+          <div class="diagnosis-card"><strong>Authority</strong><span>Marka güvenilir bağımsız kaynaklarda yeterince görünür mü?</span></div>
+          <div class="diagnosis-card"><strong>Referenceability</strong><span>İçerik doğrulanabilir, yapılandırılmış ve kaynak gösterilebilir mi?</span></div>
+          <div class="diagnosis-card"><strong>Competitive Gap</strong><span>Rakip hangi sorgu ve kaynaklarda avantaj kazanıyor?</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="section-heading">
+        <span class="kicker">Ölçtüğümüz sinyaller</span>
+        <h2>“Üstlerde miyiz?” sorusunu ölçülebilir hale getiriyoruz.</h2>
+        <p>AI cevapları klasik 1–10 sıralama değildir. Bu yüzden görünürlüğü birden fazla sinyalle değerlendiririz.</p>
+      </div>
+      <div class="metric-grid four">
+        <div class="metric"><strong>Visibility Rate</strong><span>Markanın kaç sorguda göründüğü.</span></div>
+        <div class="metric"><strong>Recommendation Rate</strong><span>Kaç sorguda doğrudan önerildiği.</span></div>
+        <div class="metric"><strong>AI Prominence</strong><span>P0–P4 ile cevaptaki belirginlik seviyesi.</span></div>
+        <div class="metric"><strong>Citation Rate</strong><span>Marka veya siteyi destekleyen kaynak kullanımı.</span></div>
+        <div class="metric"><strong>Share of Voice</strong><span>Markanın rakiplere karşı görünürlük payı.</span></div>
+        <div class="metric"><strong>Blind Spots</strong><span>Yüksek değerli ama markanın kaybolduğu sorgular.</span></div>
+        <div class="metric"><strong>Source Coverage</strong><span>AI'ın kullandığı kaynaklarda marka kapsaması.</span></div>
+        <div class="metric"><strong>Consistency</strong><span>Aynı tema ve sorgu ailesinde tekrar edilebilirlik.</span></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="fix">
+      <div class="shell split">
+        <div class="section-heading left">
+          <span class="kicker">Optimization Intelligence</span>
+          <h2>Teşhisten doğrudan uygulanabilir reçeteye.</h2>
+          <p>CORE/EEAT/CITE benzeri kalite çerçevelerini resmi platform rehberleri ve AIVR'ın gerçek ölçümleriyle birleştiririz. Teorik öneri, gerçek kanıtın önüne geçmez.</p>
+        </div>
+        <div class="evidence-stack">
+          <div class="evidence-row"><b>A</b><div><strong>Official</strong><span>Platform ve arama motorlarının resmi teknik rehberleri.</span></div></div>
+          <div class="evidence-row"><b>B</b><div><strong>Observed</strong><span>AIVR'ın gerçek sorgu, rakip ve citation ölçümleri.</span></div></div>
+          <div class="evidence-row"><b>C</b><div><strong>Heuristic</strong><span>CORE-EEAT, CITE ve benzeri uzmanlık metodolojileri.</span></div></div>
+        </div>
+      </div>
+
+      <div class="shell fix-grid">
+        <article class="fix-card"><span class="fix-badge">PATCH</span><h3>Mevcut siteyi düzelt</h3><p>Robots/crawl, schema, metadata, internal links, entity tutarlılığı ve kritik sayfa problemlerini gideririz.</p></article>
+        <article class="fix-card"><span class="fix-badge">CONTENT</span><h3>Eksik sorguları kapsa</h3><p>Gerçek ticari niyet ve rakip boşluğuna göre landing page, FAQ, karşılaştırma ve yerel içerik üretiriz.</p></article>
+        <article class="fix-card"><span class="fix-badge">AUTHORITY</span><h3>Citation gap'i kapat</h3><p>Rakipleri destekleyen üçüncü taraf kaynakları bulur, marka varlığı ve güven sinyalleri için aksiyon planı çıkarırız.</p></article>
+        <article class="fix-card"><span class="fix-badge">REBUILD</span><h3>Gerekirse yeni site</h3><p>Mevcut yapı parçalı düzeltmeye uygun değilse, aynı domain için staging'de AI-ready yeni sürüm hazırlayıp onay sonrası devreye alırız.</p></article>
+      </div>
+    </section>
+
+    <section class="section shell" id="proof">
+      <div class="section-heading">
+        <span class="kicker">Before / After Proof</span>
+        <h2>Düzeltmenin işe yarayıp yaramadığını tekrar ölçeriz.</h2>
+        <p>Aynı benchmark sorgularını tekrar çalıştırır, artışı ve kalan sorunları açıkça gösteririz.</p>
+      </div>
+
+      <div class="proof-table" role="table" aria-label="Temsili önce sonra karşılaştırması">
+        <div class="proof-row proof-head" role="row"><span>Metrik</span><span>Önce</span><span>Sonra</span><span>Değişim</span></div>
+        <div class="proof-row" role="row"><span>AI Visibility</span><b>%23</b><b>%47</b><em>+24 puan</em></div>
+        <div class="proof-row" role="row"><span>Recommendation Rate</span><b>%13</b><b>%34</b><em>+21 puan</em></div>
+        <div class="proof-row" role="row"><span>P0 / P1 görünüm</span><b>2</b><b>9</b><em>+7</em></div>
+        <div class="proof-row" role="row"><span>Blind Spots</span><b>17</b><b>8</b><em>-9</em></div>
+      </div>
+      <p class="illustrative center">Tamamı temsili örnektir. Belirli bir sıralama veya artış garanti edilmez; gerçek sonuçlar ölçülerek raporlanır.</p>
+    </section>
+
+    <section class="section section-dark" id="trust">
+      <div class="shell split">
+        <div class="section-heading left">
+          <span class="kicker">Güvenli uygulama</span>
+          <h2>Siteniz ve domaininiz sizde kalır.</h2>
+          <p>Teknik düzeltme veya rebuild gerektiğinde ana şifrenizi istemeden, mümkün olan en düşük yetkiyle ve geri dönüş planıyla çalışırız.</p>
+        </div>
+        <div class="trust-list">
+          <div><span>✓</span><p><strong>Domain sizde</strong>Alan adı sahipliğini devralmayız.</p></div>
+          <div><span>✓</span><p><strong>Önce staging</strong>Yeni sürüm canlı siteye dokunmadan hazırlanır.</p></div>
+          <div><span>✓</span><p><strong>Onaysız yayın yok</strong>Production geçişi müşteri onayından sonra yapılır.</p></div>
+          <div><span>✓</span><p><strong>Yedek + rollback</strong>Canlıya almadan önce geri dönüş noktası hazırlanır.</p></div>
+          <div><span>✓</span><p><strong>E-posta kayıtları korunur</strong>Standart web geçişinde mail DNS kayıtlarına dokunulmaz.</p></div>
         </div>
       </div>
     </section>
 
     <section class="section shell" id="pricing">
       <div class="section-heading">
-        <span class="kicker">Pilot fiyatlandırma</span>
-        <h2>Önce sonucu görün.</h2>
-        <p>İlk aşamada hizmeti basit ve anlaşılır paketlerle sunuyoruz.</p>
+        <span class="kicker">Başlangıç paketleri</span>
+        <h2>Önce teşhis. Sonra yalnız gereken çözüm.</h2>
+        <p>Her müşteriye web sitesi satmak yerine, kök nedene göre doğru müdahaleyi öneririz.</p>
       </div>
       <div class="pricing-grid">
         <article class="price-card">
-          <span class="price-name">Mini Analiz</span>
+          <span class="price-name">Mini Visibility Check</span>
           <div class="price">Ücretsiz</div>
-          <ul><li>Seçilmiş ticari niyetli sorgular</li><li>Aktif AI sağlayıcıları; ölçüm kapsamı raporda açıkça belirtilir</li><li>Temel rakip farkı</li><li>1 sayfalık özet</li></ul>
-          <a class="button secondary full" href="#free-check">Ücretsiz analiz iste</a>
+          <ul>
+            <li>Seçilmiş ticari niyetli sorgular</li>
+            <li>Aktif AI sağlayıcılarında ilk görünürlük kontrolü</li>
+            <li>Temel rakip ve kör nokta özeti</li>
+            <li>İlk teşhis sinyalleri</li>
+          </ul>
+          <a class="button secondary full" href="#free-check">Ücretsiz başlat</a>
         </article>
+
         <article class="price-card featured">
-          <span class="badge">Pilot</span>
-          <span class="price-name">Tam Görünürlük Analizi</span>
+          <span class="badge">ÇEKİRDEK</span>
+          <span class="price-name">AI Visibility Diagnosis</span>
           <div class="price">4.900 TL</div>
-          <ul><li>30+ ticari niyetli sorgu</li><li>Aktif AI sağlayıcıları; ölçüm kapsamı raporda açıkça belirtilir</li><li>Rakip ve atıf analizi</li><li>Kaynak istihbaratı</li><li>Önceliklendirilmiş aksiyon planı</li><li>Profesyonel PDF rapor</li></ul>
-          <a class="button primary full" href="#free-check">Önce ücretsiz analiz yap</a>
+          <ul>
+            <li>30+ ticari niyetli sorgu</li>
+            <li>Visibility / Recommendation / Prominence ölçümü</li>
+            <li>Rakip + citation + source gap</li>
+            <li>Root-cause diagnosis</li>
+            <li>Öncelikli Fix reçetesi</li>
+            <li>Profesyonel rapor</li>
+          </ul>
+          <a class="button primary full" href="#free-check">Önce ücretsiz kontrol</a>
         </article>
+
         <article class="price-card">
-          <span class="price-name">Ajans White-Label</span>
+          <span class="price-name">Managed AI Visibility Growth</span>
           <div class="price">Teklif</div>
-          <ul><li>Kendi ajans markanızla rapor</li><li>Çoklu müşteri çalışma akışı</li><li>Tekrarlanabilir analiz formatı</li><li>Hacme özel fiyatlandırma</li></ul>
-          <a class="button secondary full" href="#free-check">Pilot talep et</a>
+          <ul>
+            <li>Diagnosis + uygulama</li>
+            <li>Site patch / içerik / schema / entity</li>
+            <li>Citation gap çalışması</li>
+            <li>Gerekirse AI-ready website rebuild</li>
+            <li>Before / after yeniden ölçüm</li>
+            <li>Aylık monitor seçeneği</li>
+          </ul>
+          <a class="button secondary full" href="#free-check">Ön analiz iste</a>
         </article>
       </div>
     </section>
@@ -115,9 +223,15 @@
       <div class="lead-panel">
         <div>
           <span class="kicker">Ücretsiz mini analiz</span>
-          <h2>Satın almadan önce görünürlük farkınızı görün.</h2>
-          <p>Formu gönderdiğinizde talebiniz doğrudan analiz kuyruğumuza iletilir. Kart veya ödeme bilgisi istenmez.</p>
+          <h2>AI neden rakiplerinizi öneriyor, ilk sinyali görün.</h2>
+          <p>Web sitenizi, sektörünüzü ve varsa ana rakiplerinizi gönderin. İlk görünürlük kontrolüyle nereden başlamamız gerektiğini belirleyelim.</p>
+          <div class="lead-points">
+            <span>✓ Kart bilgisi gerekmez</span>
+            <span>✓ Teknik bilgi gerekmez</span>
+            <span>✓ Aktif ölçüm kapsamı açıkça belirtilir</span>
+          </div>
         </div>
+
         <form id="audit-form" class="audit-form" method="POST" action="#">
           <input type="hidden" name="_subject" value="AI Visibility Radar | Yeni Ücretsiz Mini Analiz Talebi" />
           <input type="hidden" name="_template" value="table" />
@@ -125,17 +239,22 @@
           <input type="hidden" name="_url" value="https://nedim-ucarsu.github.io/tubeforge-pages/ai-visibility-radar/" />
           <input type="hidden" name="_autoresponse" value="Talebinizi aldık. AI Visibility Radar mini analiziniz için bilgileri inceleyip size e-posta üzerinden dönüş yapacağız." />
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-10000px;opacity:0;height:1px;width:1px" aria-hidden="true" />
+
           <label>Şirket / marka<input name="Marka" required autocomplete="organization" placeholder="Örnek Marka" /></label>
           <label>Web sitesi<input name="Web_Sitesi" required type="url" placeholder="https://ornek.com" /></label>
+
           <div class="form-row">
             <label>Ülke<input name="Ulke" required placeholder="Türkiye" /></label>
-            <label>Sektör<input name="Sektor" required placeholder="SEO ajansı" /></label>
+            <label>Sektör<input name="Sektor" required placeholder="Restoran, e-ticaret, hukuk..." /></label>
           </div>
-          <label>Ana rakip <span>(isteğe bağlı)</span><input name="Ana_Rakip" placeholder="Rakip marka" /></label>
+
+          <label>Ana rakipler <span>(isteğe bağlı)</span><input name="Ana_Rakip" placeholder="Rakip A, Rakip B" /></label>
           <label>E-posta <span>(analiz sonucu için)</span><input name="email" required type="email" autocomplete="email" placeholder="siz@sirket.com" /></label>
-          <label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5"><input name="KVKK_Onay" type="checkbox" value="Onaylandi" required style="width:auto;margin-top:3px" /><span>Bu formdaki bilgilerin ücretsiz mini analiz talebimin değerlendirilmesi ve benimle iletişim kurulması amacıyla işlenmesini kabul ediyorum.</span></label>
-          <button class="button primary full" type="submit">Ücretsiz analiz talebini gönder</button>
-          <p class="form-status" id="form-status" role="status">Başvurunuz e-posta ile güvenli biçimde iletilir.</p>
+
+          <label class="consent"><input name="KVKK_Onay" type="checkbox" value="Onaylandi" required /><span>Bu formdaki bilgilerin ücretsiz mini analiz talebimin değerlendirilmesi ve benimle iletişim kurulması amacıyla işlenmesini kabul ediyorum.</span></label>
+
+          <button class="button primary full" type="submit">Ücretsiz görünürlük kontrolünü başlat</button>
+          <p class="form-status" id="form-status" role="status">Başvurunuz güvenli biçimde iletilir.</p>
         </form>
       </div>
     </section>
@@ -143,10 +262,10 @@
 
   <footer class="footer shell">
     <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>AI Visibility Radar</span></div>
-    <p>Kanıta dayalı yapay zekâ görünürlüğü ve rakip istihbaratı.</p>
-    <p class="fine">Pilot web sitesi · Bu sitede ödeme veya kart bilgisi toplanmaz.</p>
+    <p>Ölç. Teşhis et. Düzelt. Tekrar ölç.</p>
+    <p class="fine">AI görünürlüğü dinamik ve sağlayıcıya göre değişkendir. Belirli bir sıralama veya önerilme sonucu garanti edilmez.</p>
   </footer>
 
-  <script src="./app.js?v=tr-20260916-3"></script>
+  <script src="./app.js?v=tr-20260918-1"></script>
 </body>
 </html>
