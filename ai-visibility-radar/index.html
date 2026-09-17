@@ -54,7 +54,7 @@
           <div class="console-metric"><span>Cevaptaki konum</span><strong>P2</strong><small>Cevaptaki görünür konum</small></div>
           <div class="console-metric"><span>Rakip Farkı</span><strong>-31</strong><small>Görünürlük payı farkı</small></div>
         </div>
-        <div class="diagnosis-strip"><b>Teşhis:</b> içerik boşluğu + entity tutarsızlığı + üçüncü taraf kaynak eksikliği</div>
+        <div class="diagnosis-strip"><b>Teşhis:</b> içerik boşluğu + marka kimliği tutarsızlığı + üçüncü taraf kaynak eksikliği</div>
       </div>
       <p class="illustrative">Yukarıdaki değerler temsili örnektir; gerçek müşteri sonucu değildir.</p>
     </section>
@@ -68,10 +68,10 @@
 
       <div class="flow-grid">
         <article class="flow-card"><span>01</span><h3>Markayı ve pazarı tanı</h3><p>Marka, sektör, konum, hizmetler, rakipler ve ticari arama niyetlerini çıkarırız.</p></article>
-        <article class="flow-card"><span>02</span><h3>Görünürlüğü ölç</h3><p>Gerçek kullanıcı niyetli sorgularda marka, rakip, öneri, citation ve görünür konum sinyallerini ölçeriz.</p></article>
-        <article class="flow-card"><span>03</span><h3>Kök nedeni teşhis et</h3><p>Teknik, entity, içerik, otorite, citation, yerel veri ve güven problemlerini kök neden olarak sınıflandırırız.</p></article>
+        <article class="flow-card"><span>02</span><h3>Görünürlüğü ölç</h3><p>Gerçek kullanıcı niyetli sorgularda marka, rakip, öneri, kaynak gösterimi ve cevaptaki görünür konum sinyallerini ölçeriz.</p></article>
+        <article class="flow-card"><span>03</span><h3>Kök nedeni teşhis et</h3><p>Teknik erişim, marka kimliği, içerik, otorite, kaynak görünürlüğü, yerel işletme verileri ve güven sorunlarını kök neden olarak sınıflandırırız.</p></article>
         <article class="flow-card"><span>04</span><h3>Düzeltme reçetesi çıkar</h3><p>Her problem için kanıt, öncelik, beklenen sinyal ve uygulanacak düzeltme reçetesi oluştururuz.</p></article>
-        <article class="flow-card"><span>05</span><h3>Düzeltmeleri uygula</h3><p>Mevcut siteyi düzeltir, içerik/schema/entity/citation çalışmalarını uygular; gerekiyorsa yeni AI-ready site üretiriz.</p></article>
+        <article class="flow-card"><span>05</span><h3>Düzeltmeleri uygula</h3><p>Mevcut siteyi düzeltir, içerik, yapılandırılmış veri, marka kimliği ve kaynak görünürlüğü çalışmalarını uygular; gerekiyorsa yeni yapay zekâ aramalarına uyumlu site üretiriz.</p></article>
         <article class="flow-card"><span>06</span><h3>Sonucu doğrula</h3><p>Aynı benchmark sorgularıyla yeniden ölçer, önce/sonra farkını ve kalan kör noktaları raporlarız.</p></article>
       </div>
     </section>
@@ -85,7 +85,7 @@
           <a class="text-link" href="./sample-report.html?v=tr-20260918-1">Örnek teşhis raporunu aç →</a>
         </div>
         <div class="diagnosis-grid">
-          <div class="diagnosis-card"><strong>Markayı ve pazarı tanıability</strong><span>Yapay zekâ ve arama tarayıcıları sitenize ve önemli sayfalarınıza sorunsuz ulaşabiliyor mu?</span></div>
+          <div class="diagnosis-card"><strong>Erişilebilirlik ve keşfedilebilirlik</strong><span>Yapay zekâ ve arama tarayıcıları sitenize ve önemli sayfalarınıza sorunsuz ulaşabiliyor mu?</span></div>
           <div class="diagnosis-card"><strong>Marka kimliği</strong><span>Marka adı, şubeler, hizmetler, adresler ve diğer işletme bilgileri farklı kaynaklarda aynı ve anlaşılır mı?</span></div>
           <div class="diagnosis-card"><strong>Sorgu ile içerik uyumu</strong><span>Sitenizde müşterilerin gerçekten sorduğu satın alma, karşılaştırma ve öneri sorularını doğrudan karşılayan içerikler var mı?</span></div>
           <div class="diagnosis-card"><strong>Otorite ve güven</strong><span>Markanız güvenilir bağımsız sitelerde, sektör kaynaklarında ve yerel kaynaklarda yeterince yer alıyor mu?</span></div>
@@ -104,7 +104,7 @@
       <div class="metric-grid four">
         <div class="metric"><strong>Görünme Oranı</strong><span>Markanın kaç sorguda göründüğü.</span></div>
         <div class="metric"><strong>Önerilme Oranı</strong><span>Kaç sorguda doğrudan önerildiği.</span></div>
-        <div class="metric"><strong>AI Cevaptaki konum</strong><span>Markanın cevabın ana önerisi mi, ilk seçeneklerden biri mi, yalnızca bir yerde anılan seçenek mi olduğunu ölçeriz.</span></div>
+        <div class="metric"><strong>Cevapta Öncelikli Görünüm</strong><span>Markanın cevabın ana önerisi mi, ilk seçeneklerden biri mi, yalnızca bir yerde anılan seçenek mi olduğunu ölçeriz.</span></div>
         <div class="metric"><strong>Kaynak Gösterilme Oranı</strong><span>Marka veya siteyi destekleyen kaynak kullanımı.</span></div>
         <div class="metric"><strong>Görünürlük Payı</strong><span>Markanın rakiplere karşı görünürlük payı.</span></div>
         <div class="metric"><strong>Görünürlük Kör Noktaları</strong><span>Yüksek değerli ama markanın kaybolduğu sorgular.</span></div>
@@ -128,10 +128,10 @@
       </div>
 
       <div class="shell fix-grid">
-        <article class="fix-card"><span class="fix-badge">MEVCUT SİTE</span><h3>Mevcut siteyi düzelt</h3><p>Robots/crawl, schema, metadata, internal links, entity tutarlılığı ve kritik sayfa problemlerini gideririz.</p></article>
-        <article class="fix-card"><span class="fix-badge">İÇERİK</span><h3>Eksik sorguları kapsa</h3><p>Gerçek ticari niyet ve rakip boşluğuna göre landing page, FAQ, karşılaştırma ve yerel içerik üretiriz.</p></article>
-        <article class="fix-card"><span class="fix-badge">OTORİTE</span><h3>Citation gap'i kapat</h3><p>Rakipleri destekleyen üçüncü taraf kaynakları bulur, marka varlığı ve güven sinyalleri için aksiyon planı çıkarırız.</p></article>
-        <article class="fix-card"><span class="fix-badge">YENİDEN KURULUM</span><h3>Gerekirse yeni site</h3><p>Mevcut yapı parçalı düzeltmeye uygun değilse, aynı domain için staging'de AI-ready yeni sürüm hazırlayıp onay sonrası devreye alırız.</p></article>
+        <article class="fix-card"><span class="fix-badge">MEVCUT SİTE</span><h3>Mevcut siteyi düzelt</h3><p>Tarama erişimi, yapılandırılmış veri, sayfa başlıkları/açıklamaları, site içi bağlantılar ve marka kimliği tutarlılığı ve kritik sayfa problemlerini gideririz.</p></article>
+        <article class="fix-card"><span class="fix-badge">İÇERİK</span><h3>Eksik sorguları kapsa</h3><p>Gerçek ticari niyet ve rakip boşluğuna göre hedef sayfalar, sık sorulan sorular, karşılaştırma sayfaları ve yerel içerikler üretiriz.</p></article>
+        <article class="fix-card"><span class="fix-badge">OTORİTE</span><h3>Kaynak görünürlüğü farkını kapat</h3><p>Rakipleri destekleyen üçüncü taraf kaynakları bulur, marka varlığı ve güven sinyalleri için aksiyon planı çıkarırız.</p></article>
+        <article class="fix-card"><span class="fix-badge">YENİDEN KURULUM</span><h3>Gerekirse yeni site</h3><p>Mevcut yapı parçalı düzeltmeye uygun değilse, aynı domain için canlı siteye dokunmadan önizleme ortamında AI-ready yeni sürüm hazırlayıp onay sonrası devreye alırız.</p></article>
       </div>
     </section>
 
@@ -195,7 +195,7 @@
           <ul>
             <li>30+ ticari niyetli sorgu</li>
             <li>Visibility / Recommendation / Cevaptaki konum ölçümü</li>
-            <li>Rakip + citation + source gap</li>
+            <li>Rakip + kaynak gösterimi + source gap</li>
             <li>Kök neden teşhisi</li>
             <li>Öncelikli Düzeltmeleri uygula reçetesi</li>
             <li>Profesyonel rapor</li>
