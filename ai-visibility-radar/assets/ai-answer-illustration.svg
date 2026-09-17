@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="t d">
+<title id="t">Yapay zekâ cevaplarında marka görünürlüğü örneği</title>
+<desc id="d">Bir kullanıcı sorusunda rakiplerin önerildiği, markanın geri planda kaldığı ve AI Visibility Radar'ın nedenleri teşhis ettiği temsili şema.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#081426"/><stop offset="1" stop-color="#102a4a"/></linearGradient>
+  <linearGradient id="g" x1="0" x2="1"><stop stop-color="#63e6be"/><stop offset="1" stop-color="#74c0fc"/></linearGradient>
+  <filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-opacity=".28"/></filter>
+</defs>
+<rect width="1200" height="620" rx="34" fill="url(#bg)"/>
+<circle cx="1040" cy="80" r="150" fill="#74c0fc" opacity=".06"/><circle cx="160" cy="540" r="180" fill="#63e6be" opacity=".05"/>
+<text x="58" y="72" fill="#63e6be" font-family="Arial,sans-serif" font-weight="700" font-size="20">TEMSiLi AI CEVABI</text>
+<text x="58" y="110" fill="#eef6ff" font-family="Arial,sans-serif" font-weight="700" font-size="29">“Ankara'da iyi bir dönerci öner.”</text>
+
+<g filter="url(#s)">
+<rect x="58" y="145" width="550" height="390" rx="24" fill="#0f1d31" stroke="#2b4666"/>
+<rect x="82" y="171" width="502" height="56" rx="16" fill="#142944"/>
+<circle cx="112" cy="199" r="12" fill="url(#g)"/><text x="138" y="207" fill="#dcecff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Yapay zekâ önerileri</text>
+
+<rect x="82" y="247" width="502" height="68" rx="15" fill="#17365d" stroke="#74c0fc" stroke-opacity=".55"/>
+<circle cx="112" cy="281" r="18" fill="#74c0fc"/><text x="107" y="288" fill="#06111f" font-family="Arial,sans-serif" font-weight="700" font-size="18">1</text>
+<text x="148" y="279" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="21">Rakip Marka A</text><text x="148" y="300" fill="#9fb0c6" font-family="Arial,sans-serif" font-size="14">3 bağımsız kaynakta destekleniyor</text>
+
+<rect x="82" y="328" width="502" height="68" rx="15" fill="#12253f"/>
+<circle cx="112" cy="362" r="18" fill="#344e6c"/><text x="107" y="369" fill="#eef6ff" font-family="Arial,sans-serif" font-weight="700" font-size="18">2</text>
+<text x="148" y="360" fill="#eef6ff" font-family="Arial,sans-serif" font-weight="700" font-size="21">Rakip Marka B</text><text x="148" y="381" fill="#9fb0c6" font-family="Arial,sans-serif" font-size="14">İçerik ve otorite sinyali güçlü</text>
+
+<rect x="82" y="409" width="502" height="84" rx="15" fill="#2b1f2d" stroke="#ff6b6b" stroke-opacity=".35"/>
+<circle cx="112" cy="451" r="18" fill="#4a2a36"/><text x="106" y="458" fill="#ff9c9c" font-family="Arial,sans-serif" font-weight="700" font-size="18">×</text>
+<text x="148" y="447" fill="#ffd5d5" font-family="Arial,sans-serif" font-weight="700" font-size="21">Sizin markanız</text><text x="148" y="470" fill="#c59aa4" font-family="Arial,sans-serif" font-size="14">Cevapta görünmüyor veya geri planda</text>
+</g>
+
+<path d="M638 336 C700 336 714 336 750 336" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/>
+<path d="M741 323 L760 336 L741 349" fill="none" stroke="#63e6be" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g filter="url(#s)">
+<rect x="786" y="145" width="356" height="390" rx="24" fill="#0d2139" stroke="#345375"/>
+<text x="820" y="190" fill="#eef6ff" font-family="Arial,sans-serif" font-size="24" font-weight="700">AIVR nedenini bulur</text>
+<text x="820" y="219" fill="#9fb0c6" font-family="Arial,sans-serif" font-size="15">Sorun yalnız “görünmeme” değildir.</text>
+
+<g font-family="Arial,sans-serif">
+<rect x="820" y="252" width="288" height="48" rx="13" fill="#112f38"/><circle cx="846" cy="276" r="9" fill="#63e6be"/><text x="870" y="282" fill="#dffcf3" font-size="17">İçerik açığı</text>
+<rect x="820" y="312" width="288" height="48" rx="13" fill="#142b43"/><circle cx="846" cy="336" r="9" fill="#74c0fc"/><text x="870" y="342" fill="#e4f1ff" font-size="17">Marka kimliği tutarsızlığı</text>
+<rect x="820" y="372" width="288" height="48" rx="13" fill="#2f2b1a"/><circle cx="846" cy="396" r="9" fill="#ffd166"/><text x="870" y="402" fill="#fff4c7" font-size="17">Kaynak görünürlüğü farkı</text>
+<rect x="820" y="432" width="288" height="48" rx="13" fill="#2b2238"/><circle cx="846" cy="456" r="9" fill="#b197fc"/><text x="870" y="462" fill="#eee6ff" font-size="17">Teknik erişim sorunu</text>
+</g>
+</g>
+<text x="600" y="586" text-anchor="middle" fill="#718198" font-family="Arial,sans-serif" font-size="14">Temsili görsel — gerçek sonuçlar marka, sektör, sorgu ve ölçüm kapsamına göre değişir.</text>
+</svg>
