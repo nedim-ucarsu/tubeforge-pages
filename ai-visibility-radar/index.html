@@ -172,6 +172,16 @@
             <div class="submit-row"><span>✓ Web sitesi zorunlu değil · Sonuç garantisi verilmez</span><button id="lead-submit" class="btn btn-primary" type="submit">Ücretsiz Değerlendirme Talebini Gönder</button></div>
           </form>
         </div>
+        <div id="submission-receipt" class="submission-receipt" hidden aria-live="polite">
+          <div class="receipt-head"><span class="eyebrow eyebrow-green">BAŞVURU ALINDI</span><span id="receipt-id" class="receipt-id"></span></div>
+          <h3>Ön değerlendirme talebiniz kayıt altına alındı.</h3>
+          <div class="receipt-grid">
+            <div><small>İşletme</small><strong id="receipt-brand">—</strong></div>
+            <div><small>E-posta</small><strong id="receipt-email">—</strong></div>
+            <div><small>Durum</small><strong>TALEP_ALINDI</strong></div>
+          </div>
+          <p class="receipt-note">Bu kayıt bir teslim alındı belgesidir; değerlendirme raporu değildir. GitHub Pages üzerindeki bu form şu anda AIVR ölçüm motorunu doğrudan çalıştırmaz.</p>
+        </div>
       </div>
     </section>
 
@@ -213,7 +223,7 @@
 
   <div class="modal" id="thanks-modal" aria-hidden="true">
     <div class="modal-backdrop" data-close-thanks></div>
-    <div class="modal-dialog modal-small" role="dialog" aria-modal="true" aria-labelledby="thanks-title"><button class="modal-close" type="button" data-close-thanks aria-label="Pencereyi kapat">×</button><div class="success-icon">✓</div><h2 id="thanks-title">Talebiniz alındı.</h2><p id="thanks-copy">Ön değerlendirme talebiniz başarıyla iletildi.</p><div class="next-steps"><strong>Şimdi ne olacak?</strong><ol><li>İşletme, kategori ve lokasyon bilgileri incelenir.</li><li>Uygun sorgu ve sağlayıcı kapsamı belirlenir.</li><li>Sonraki adımlar e-posta adresinize iletilir.</li></ol></div><p class="disclaimer">Bu onay, canlı denetimin tamamlandığı veya belirli bir sonucun garanti edildiği anlamına gelmez.</p><div class="modal-footer"><button class="btn btn-secondary" data-close-thanks>Kapat</button><button class="btn btn-primary" data-thanks-report>Örnek Raporu İncele</button></div></div>
+    <div class="modal-dialog modal-small" role="dialog" aria-modal="true" aria-labelledby="thanks-title"><button class="modal-close" type="button" data-close-thanks aria-label="Pencereyi kapat">×</button><div class="success-icon">✓</div><h2 id="thanks-title">Talebiniz alındı.</h2><p id="thanks-copy">Ön değerlendirme talebiniz başarıyla iletildi.</p><div class="next-steps"><strong>Durum</strong><ol><li>Başvuru bilgileri kayıt altına alındı.</li><li>Bu aşamada otomatik AIVR denetimi başlatılmadı.</li><li>Gerçek değerlendirme raporu ancak ölçüm motoru çalıştırıldığında oluşturulur.</li></ol></div><p class="disclaimer">Bu onay bir değerlendirme raporu değildir ve canlı denetimin tamamlandığı anlamına gelmez.</p><div class="modal-footer"><button class="btn btn-secondary" data-close-thanks>Kapat</button><button class="btn btn-primary" data-thanks-report>Örnek Raporu İncele</button></div></div>
   </div>
 
   <script src="./app.js" defer></script>
