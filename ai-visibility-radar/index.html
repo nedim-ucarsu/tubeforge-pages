@@ -1,298 +1,749 @@
 <!doctype html>
+<!-- PUBLIC_PRODUCT_VERSION=1.8.6.9 PRODUCT_CAPABILITY_SYNC_DATE=2026-09-19 -->
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI Visibility Radar; markanızın yapay zekâ cevaplarında neden görünmediğini teşhis eder, rakip ve kaynak farkını gösterir, düzeltme planı üretir ve sonucu yeniden ölçer." />
+  <meta name="description" content="AI Visibility Radar; yapay zekâ cevaplarında markanızın neden görünmediğini ölçer, kaynak ve rakip farkını teşhis eder, kanıta dayalı reçete üretir ve sonucu yeniden ölçer." />
   <meta name="theme-color" content="#07111f" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>AI Visibility Radar — Ölç, Teşhis Et, Düzelt, Tekrar Ölç</title>
-  <link rel="stylesheet" href="./styles.css?v=tr-20260918-2" />
+
+  <title>AI Visibility Radar — Yapay Zekâ Aramalarında Görünürlük Teşhisi</title>
+  <link rel="canonical" href="https://nedim-ucarsu.github.io/tubeforge-pages/ai-visibility-radar/" />
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI Visibility Radar — Yapay Zekâ Neden Rakiplerinizi Öneriyor?" />
+  <meta property="og:description" content="Yapay zekâ motorlarında marka görünürlüğünüzü ölçün. Eksik kanıtsız, şeffaf teşhis, kaynak analizi ve doğrulanmış müşteri raporları." />
+  <meta property="og:url" content="https://nedim-ucarsu.github.io/tubeforge-pages/ai-visibility-radar/" />
+  <meta property="og:image" content="https://nedim-ucarsu.github.io/tubeforge-pages/ai-visibility-radar/assets/ai-answer-illustration.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Visibility Radar — Yapay Zekâ Görünürlük Teşhisi" />
+  <meta name="twitter:description" content="Yapay zekâ arama ve tavsiyelerinde markanızın konumunu, kaynak kapsamını ve kör noktalarını kanıta dayalı olarak ölçün." />
+
+  <link rel="stylesheet" href="./styles.css?v=20260919-v1" />
 </head>
 <body>
-  <header class="nav shell">
-    <a class="brand" href="#top" aria-label="AI Visibility Radar ana sayfa">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>AI Visibility Radar</span>
-    </a>
-    <nav class="nav-links" aria-label="Ana menü">
-      <a href="#how">Nasıl çalışır?</a>
-      <a href="#diagnosis">Teşhis</a>
-      <a href="#fix">Düzeltme</a>
-      <a href="#proof">Kanıt</a>
-      <a href="#pricing">Paketler</a>
-      <a class="nav-cta" href="#free-check">Ücretsiz analiz</a>
-    </nav>
+  <a href="#main-content" class="skip-link">İçeriğe Atla</a>
+
+  <header class="header-wrapper">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="AI Visibility Radar Ana Sayfa">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>AI Visibility Radar</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menüyü aç veya kapat">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav id="nav-links" class="nav-links" aria-label="Ana Gezinme Menüsü">
+        <a href="#what">Neyi Ölçüyoruz?</a>
+        <a href="#demo">Ürün Demosu</a>
+        <a href="#how">Nasıl Çalışır?</a>
+        <a href="#evidence">Kanıt Mantığı</a>
+        <a href="#reports">Rapor Merkezi</a>
+        <a href="#proof">Önce / Sonra</a>
+        <a href="#exports">Dışa Aktarım</a>
+        <a href="#pricing">Paketler</a>
+        <a class="nav-cta" href="#free-check">Ücretsiz Kontrol</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero shell">
-      <div class="hero-grid">
+  <main id="main-content">
+    <!-- ============================================================
+         1. HERO V2
+         ============================================================ -->
+    <section class="hero shell" id="top">
+      <div class="hero-split">
         <div class="hero-message">
-          <div class="eyebrow">Yapay zekâ aramalarında görünürlük geliştirme</div>
-          <h1>Yapay zekâ neden rakiplerinizi öneriyor?</h1>
-          <p class="hero-copy">Müşteriler yapay zekâya ürün veya hizmet önerisi sorduğunda markanızın görünüp görünmediğini ölçüyoruz. Rakiplerin neden öne çıktığını buluyor, gerekli düzeltmeleri uyguluyor ve sonucu aynı sorgularla yeniden ölçüyoruz.</p>
+          <div class="eyebrow">Yapay Zekâ Görünürlük Teşhisi</div>
+          <h1>Yapay zekâ müşterilerinize kimi öneriyor — ve neden?</h1>
+          <p class="hero-copy">
+            Potansiyel müşteriler yapay zekâya sektörünüzde ürün veya hizmet sorduğunda markanızın anılıp anılmadığını ölçüyoruz.
+            Rakiplerin neden öne çıktığını kaynak ve kanıt bazında teşhis ediyor, eksiksiz müşteri raporu ve düzeltme reçetesi sunuyoruz.
+          </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#free-check">Ücretsiz görünürlük kontrolü</a>
-            <a class="button secondary" href="./sample-report.html?v=tr-20260918-2">Teşhis raporu örneği</a>
+            <a class="button primary" href="#free-check">Ücretsiz ön görünürlük kontrolü</a>
+            <a class="button secondary" href="./sample-report.html?v=20260919-v1">Örnek raporu incele</a>
           </div>
 
-          <div class="engine-row" aria-label="Hedeflenen yapay zekâ ekosistemleri">
-            <span>ChatGPT</span><span>Google AI</span><span>Perplexity</span><span>Diğer AI aramaları</span>
+          <div class="hero-engines" aria-label="Denetim kapsamındaki yapay zekâ ekosistemleri">
+            <span class="label">Kapsam:</span>
+            <span>ChatGPT</span>
+            <span>Google AI Overview</span>
+            <span>Perplexity</span>
+            <span>Yerel Arama Sinyalleri</span>
           </div>
-          <p class="illustrative hero-note">Aktif ölçüm kapsamı her raporda açıkça belirtilir. Ölçülmeyen motorlar sıfır sayılmaz ve tahmini sonuçla doldurulmaz.</p>
+          <p class="illustrative">
+            Aktif denetim kapsamı her raporda açıkça listelenir. Ölçülmeyen sağlayıcılar için yapay tahmin yürütülmez.
+          </p>
         </div>
 
-        <figure class="visual-story hero-visual-inline">
-          <img src="./assets/ai-answer-illustration.svg?v=20260918-2" alt="Yapay zekâ cevabında rakiplerin önerildiği, markanın geri planda kaldığı ve AI Visibility Radar'ın nedenleri teşhis ettiği temsili örnek" width="1200" height="620" fetchpriority="high" />
-          <figcaption><strong>Sorun nerede?</strong> Rakiplerin hangi sorularda öne çıktığını, hangi kaynaklara dayandığını ve markanızın nerede kaybolduğunu birlikte inceleriz.</figcaption>
-        </figure>
-      </div>
+        <!-- Static Realistic UI Mockup -->
+        <div class="hero-mockup-card" aria-label="AI Visibility Radar Konsol Görünümü">
+          <div class="mockup-header">
+            <div class="mockup-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mockup-title">AIVR V1 // CANONICAL AUDIT CONSOLE</div>
+            <span class="badge badge-demo">TEMSİLİ DEMO</span>
+          </div>
 
-      <div class="hero-console" aria-label="AI görünürlük örnek teşhis ekranı">
-        <div class="console-head">
-          <div><span class="status-dot"></span> Örnek teşhis</div>
-          <span class="console-tag">ÖLÇÜM MANTIĞI</span>
+          <div class="mockup-body">
+            <div class="mockup-business-row">
+              <div class="mockup-biz-info">
+                <strong>Örnek Sağlık &amp; Estetik Merkezi</strong>
+                <span>Kategori: Sağlık / Medikal · Konum: İstanbul (Web Sitesi İsteğe Bağlı)</span>
+              </div>
+              <span class="badge badge-ready">REPORT_READY</span>
+            </div>
+
+            <div class="mockup-metrics-grid">
+              <div class="mockup-metric-tile">
+                <span>AI Görünürlüğü</span>
+                <strong>%23</strong>
+                <small>7 / 30 ticari sorgu</small>
+              </div>
+              <div class="mockup-metric-tile">
+                <span>Önerilme Oranı</span>
+                <strong>%13</strong>
+                <small>4 / 30 doğrudan tavsiye</small>
+              </div>
+              <div class="mockup-metric-tile">
+                <span>Kaynak Kapsamı</span>
+                <strong>4 / 14</strong>
+                <small>10 bağımsız kaynak eksik</small>
+              </div>
+              <div class="mockup-metric-tile">
+                <span>Kanıt Durumu</span>
+                <strong>Eksiksiz</strong>
+                <small>Eksik kanıt: Yok</small>
+              </div>
+            </div>
+
+            <div class="mockup-status-strip">
+              <div>
+                <b>Durum:</b> Kanıt havuzu doğrulandı · 4 formatta dışa aktarım hazır
+              </div>
+              <span class="badge badge-version">v1.8.6.9</span>
+            </div>
+          </div>
         </div>
-        <div class="console-grid">
-          <div class="console-metric"><span>AI Görünürlüğü</span><strong>%23</strong><small>Marka görünme oranı</small></div>
-          <div class="console-metric"><span>Önerilme Oranı</span><strong>%13</strong><small>Tavsiye listesine girme</small></div>
-          <div class="console-metric"><span>Cevaptaki konum</span><strong>P2</strong><small>Cevaptaki görünür konum</small></div>
-          <div class="console-metric"><span>Rakip Farkı</span><strong>-31</strong><small>Görünürlük payı farkı</small></div>
-        </div>
-        <div class="diagnosis-strip"><b>Teşhis:</b> içerik boşluğu + marka kimliği tutarsızlığı + üçüncü taraf kaynak eksikliği</div>
       </div>
-      <p class="illustrative">Yukarıdaki değerler temsili örnektir; gerçek müşteri sonucu değildir.</p>
     </section>
 
-    <section class="section shell" id="how">
+    <!-- ============================================================
+         2. WHAT AIVR DOES (Neyi Ölçüyoruz)
+         ============================================================ -->
+    <section class="section section-dark" id="what">
+      <div class="shell">
+        <div class="section-heading">
+          <span class="kicker">Ölçüm Boyutları</span>
+          <h2>Yapay zekâ cevapları klasik sıralama değildir. Çok boyutlu sinyalleri ölçüyoruz.</h2>
+          <p class="lead-text">
+            Yapay zekâ modelleri yanıt üretirken arama gözlemlerine, güvenilir otorite kaynaklarına ve marka varlığına dayanır.
+            AIVR bu süreci parçalara ayırarak somutlaştırır.
+          </p>
+        </div>
+
+        <div class="exports-grid">
+          <div class="export-card">
+            <span class="export-tag">GÖRÜNÜRLÜK</span>
+            <h3>Görünme Oranı</h3>
+            <p>Hedeflenen ticari sorguların kaçında markanızın adı veya içeriği yapay zekâ yanıtında geçiyor?</p>
+          </div>
+          <div class="export-card">
+            <span class="export-tag">TAVSİYE</span>
+            <h3>Önerilme Oranı</h3>
+            <p>Yapay zekâ sizi sadece bir seçenek olarak mı anıyor, yoksa doğrudan müşteriye tavsiye mi ediyor?</p>
+          </div>
+          <div class="export-card">
+            <span class="export-tag">OTORİTE</span>
+            <h3>Kaynak Kapsaması</h3>
+            <p>Yapay zekânın cevabını dayandırdığı bağımsız üçüncü taraf kaynaklarda markanız yer alıyor mu?</p>
+          </div>
+          <div class="export-card">
+            <span class="export-tag">KÖR NOKTALAR</span>
+            <h3>Görünürlük Açıkları</h3>
+            <p>Rakiplerinizin açıkça önerildiği ancak markanızın tamamen yok sayıldığı kritik sorgular hangileri?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. INTERACTIVE PRODUCT DEMO (Tabs: AUDIT, EVIDENCE, REPORT)
+         ============================================================ -->
+    <section class="section shell" id="demo">
       <div class="section-heading">
-        <span class="kicker">Nasıl sonuç üretiyoruz?</span>
-        <h2>Ölç → Teşhis → Düzelt → Tekrar ölç.</h2>
-        <p>Amacımız yalnız rapor vermek değil; görünürlüğü engelleyen kök nedenleri bulup uygulanabilir şekilde gidermek ve değişimi ölçmektir.</p>
+        <span class="kicker">Etkileşimli Ürün Demosu</span>
+        <h2>AIVR V1 iş akışını tarayıcınızda deneyimleyin.</h2>
+        <p class="lead-text">
+          İşletme kimliğinden kanıt doğrulamasına ve müşteri raporuna uzanan gerçek V1 adımlarını inceleyin.
+        </p>
       </div>
 
-      <div class="flow-grid">
-        <article class="flow-card"><span>01</span><h3>Markayı ve pazarı tanı</h3><p>Marka, sektör, konum, hizmetler, rakipler ve ticari arama niyetlerini çıkarırız.</p></article>
-        <article class="flow-card"><span>02</span><h3>Görünürlüğü ölç</h3><p>Gerçek kullanıcı niyetli sorgularda marka, rakip, öneri, kaynak gösterimi ve cevaptaki görünür konum sinyallerini ölçeriz.</p></article>
-        <article class="flow-card"><span>03</span><h3>Kök nedeni teşhis et</h3><p>Teknik erişim, marka kimliği, içerik, otorite, kaynak görünürlüğü, yerel işletme verileri ve güven sorunlarını kök neden olarak sınıflandırırız.</p></article>
-        <article class="flow-card"><span>04</span><h3>Düzeltme reçetesi çıkar</h3><p>Her problem için kanıt, öncelik, beklenen sinyal ve uygulanacak düzeltme reçetesi oluştururuz.</p></article>
-        <article class="flow-card"><span>05</span><h3>Düzeltmeleri uygula</h3><p>Mevcut siteyi düzeltir, içerik, yapılandırılmış veri, marka kimliği ve kaynak görünürlüğü çalışmalarını uygular; gerekiyorsa yeni yapay zekâ aramalarına uyumlu site üretiriz.</p></article>
-        <article class="flow-card"><span>06</span><h3>Sonucu doğrula</h3><p>Aynı benchmark sorgularıyla yeniden ölçer, önce/sonra farkını ve kalan kör noktaları raporlarız.</p></article>
+      <div class="demo-section-wrapper">
+        <div class="demo-tabs-bar">
+          <div class="demo-tabs-nav" role="tablist" aria-label="AIVR V1 Denetim Aşamaları">
+            <button class="demo-tab" role="tab" id="tab-audit" aria-selected="true" aria-controls="panel-audit" data-tab="audit" tabindex="0">
+              1. AUDIT (Denetim)
+            </button>
+            <button class="demo-tab" role="tab" id="tab-evidence" aria-selected="false" aria-controls="panel-evidence" data-tab="evidence" tabindex="-1">
+              2. EVIDENCE (Kanıt Havuzu)
+            </button>
+            <button class="demo-tab" role="tab" id="tab-report" aria-selected="false" aria-controls="panel-report" data-tab="report" tabindex="-1">
+              3. REPORT (Müşteri Raporu)
+            </button>
+          </div>
+          <span class="demo-disclaimer-pill">TEMSİLİ DEMO · Harici API veya canlı denetim çağırmaz</span>
+        </div>
+
+        <!-- Panel 1: AUDIT -->
+        <div class="demo-panel active" id="panel-audit" role="tabpanel" aria-labelledby="tab-audit" data-panel="audit">
+          <div class="demo-grid">
+            <div class="demo-box">
+              <h4>İşletme Kimliği &amp; Parametreler</h4>
+              <div class="demo-field-list">
+                <div class="demo-field-row"><span>İşletme / Marka:</span><strong>Örnek Klinik &amp; Estetik</strong></div>
+                <div class="demo-field-row"><span>Kategori:</span><strong>Medikal Estetik &amp; Dermatoloji</strong></div>
+                <div class="demo-field-row"><span>Şehir / Bölge:</span><strong>İstanbul / Nişantaşı</strong></div>
+                <div class="demo-field-row"><span>Web Sitesi:</span><strong>https://ornek-estetik.com (İsteğe Bağlı)</strong></div>
+                <div class="demo-field-row"><span>Google İşletme Profili:</span><strong>Doğrulanmış Yerel Varlık</strong></div>
+              </div>
+              <div class="demo-callout info">
+                <strong>V1 Kuralı:</strong> Web sitesi zorunlu değildir. AIVR, yerel işletmelerin arama motorlarındaki bağımsız varlık ve harita sinyallerini de denetleyebilir.
+              </div>
+            </div>
+
+            <div class="demo-box">
+              <h4>Denetim Kapsamı &amp; Durum</h4>
+              <div class="demo-field-list">
+                <div class="demo-field-row"><span>Denetim Durumu:</span><span class="badge badge-ready">AUDIT_RUNNING → COMPLETE</span></div>
+                <div class="demo-field-row"><span>Ölçülen Sorgu Seti:</span><strong>30 Ticari Niyetli Benchmark Sorgusu</strong></div>
+                <div class="demo-field-row"><span>Sağlayıcı Kapsamı:</span><strong>ChatGPT, Google AI, Perplexity</strong></div>
+                <div class="demo-field-row"><span>Yerel Sinyal Taraması:</span><strong>Doğrulandı</strong></div>
+                <div class="demo-field-row"><span>Hata / Timeout:</span><strong>0 Hata</strong></div>
+              </div>
+              <div class="demo-callout success">
+                <strong>Ölçüm Tamamlandı:</strong> Tüm sorgu yanıtları kaydedildi ve kanıt doğrulama aşamasına aktarıldı.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: EVIDENCE -->
+        <div class="demo-panel" id="panel-evidence" role="tabpanel" aria-labelledby="tab-evidence" data-panel="evidence">
+          <div class="demo-grid">
+            <div class="demo-box">
+              <h4>Arama Gözlemleri &amp; Kaynak Kapsamı</h4>
+              <div class="demo-field-list">
+                <div class="demo-field-row"><span>Toplanan Gözlem:</span><strong>90 AI Yanıt Parçası</strong></div>
+                <div class="demo-field-row"><span>AI'ın Kullandığı Kaynaklar:</span><strong>14 Bağımsız Otorite Kaynağı</strong></div>
+                <div class="demo-field-row"><span>Markanın Yer Aldığı Kaynak:</span><strong>4 / 14 Kaynak (%28.5)</strong></div>
+                <div class="demo-field-row"><span>Rakiplerin Yer Aldığı Kaynak:</span><strong>12 / 14 Kaynak (%85.7)</strong></div>
+                <div class="demo-field-row"><span>Kanıt Yeterlilik Durumu:</span><span class="badge badge-ready">EVIDENCE_COMPLETE</span></div>
+              </div>
+              <div class="demo-callout warning">
+                <strong>Kanıt Uydurmama İlkesi:</strong> Eksik kanıt varsa AIVR asla tahminle rapor doldurmaz; durumu <code>EVIDENCE_PENDING</code> olarak işaretler.
+              </div>
+            </div>
+
+            <div class="demo-box">
+              <h4>Kör Noktalar &amp; Kaynak Farkı</h4>
+              <div class="demo-field-list">
+                <div class="demo-field-row"><span>Kritik Sorgu Kör Noktası:</span><strong>17 Sorguda Marka Yok</strong></div>
+                <div class="demo-field-row"><span>Öne Çıkan Rakip Sinyali:</span><strong>Rakip A &amp; Rakip B 23 Sorguda</strong></div>
+                <div class="demo-field-row"><span>Eksik Dizin / Kaynak:</span><strong>DoktorTakvimi, ŞikayetVar, Yerel Rehber</strong></div>
+                <div class="demo-field-row"><span>NAP Tutarlılığı:</span><strong>Telefon ve Adres Farklılığı Tespit Edildi</strong></div>
+                <div class="demo-field-row"><span>Doğrulama Skoru:</span><strong>%100 Doğrulanmış Veri</strong></div>
+              </div>
+              <div class="demo-callout info">
+                <strong>Somut Kanıt:</strong> Rapor edilen her tespit, gerçek sorgularda yapay zekânın referans verdiği sayfalara dayanır.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: REPORT -->
+        <div class="demo-panel" id="panel-report" role="tabpanel" aria-labelledby="tab-report" data-panel="report">
+          <div class="demo-grid">
+            <div class="demo-box">
+              <h4>Müşteri Raporu &amp; Teşhis</h4>
+              <div class="demo-field-list">
+                <div class="demo-field-row"><span>Rapor Durumu:</span><span class="badge badge-ready">REPORT_READY</span></div>
+                <div class="demo-field-row"><span>Rapor ID:</span><strong>REP-2026-0919-DEMO</strong></div>
+                <div class="demo-field-row"><span>Sağlayıcı Çağrısı:</span><strong>0 (Sıfır Çağrı — İdempotent)</strong></div>
+                <div class="demo-field-row"><span>Kök Neden:</span><strong>Kaynak Boşluğu + Yerel NAP Uyuşmazlığı</strong></div>
+                <div class="demo-field-row"><span>Düzeltme Reçetesi:</span><strong>4 Öncelikli Müdahale Maddesi</strong></div>
+              </div>
+              <div class="demo-callout success">
+                <strong>Rapor Materyalizasyonu:</strong> Rapor üretilirken sıfır harici API çağrısı yapılır. Tüm çıktılar doğrulanmış kanıtlardan derlenir.
+              </div>
+            </div>
+
+            <div class="demo-box">
+              <h4>Dışa Aktarım Seçenekleri (V1 Yeteneği)</h4>
+              <div class="demo-field-list">
+                <div class="demo-field-row"><span>JSON:</span><strong>Tam Yapılandırılmış Ham &amp; İşlenmiş Veri</strong></div>
+                <div class="demo-field-row"><span>Markdown:</span><strong>Düzenlenebilir Teknik Not &amp; Dokümantasyon</strong></div>
+                <div class="demo-field-row"><span>HTML:</span><strong>Tarayıcıda İnteraktif Müşteri Raporu</strong></div>
+                <div class="demo-field-row"><span>PDF:</span><strong>Paylaşılabilir Yönetim Özeti Raporu</strong></div>
+              </div>
+              <div style="margin-top: 18px; display: flex; gap: 8px; flex-wrap: wrap;">
+                <a class="button secondary" style="min-height: 40px; padding: 0 14px; font-size: 13px;" href="./sample-report.html?v=20260919-v1">Örnek Raporu Aç →</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="diagnosis">
-      <div class="shell split">
-        <div class="section-heading left">
-          <span class="kicker">Kök neden teşhisi</span>
-          <h2>Sadece “görünmüyorsunuz” demiyoruz. Nedenini buluyoruz.</h2>
-          <p>Her müşteri aynı nedenle kaybetmez. Bu yüzden tek tip SEO listesi yerine gerçek ölçüm ve site verisine dayalı teşhis üretiriz.</p>
-          <a class="text-link" href="./sample-report.html?v=tr-20260918-1">Örnek teşhis raporunu aç →</a>
+    <!-- ============================================================
+         4. HOW THE AUDIT WORKS (Nasıl Çalışır)
+         ============================================================ -->
+    <section class="section section-dark" id="how">
+      <div class="shell">
+        <div class="section-heading">
+          <span class="kicker">Metodoloji</span>
+          <h2>Ölç → Teşhis Et → Düzelt → Tekrar Ölç.</h2>
+          <p class="lead-text">
+            Amacımız yüzeysel puanlar üretmek değil; görünürlüğü engelleyen kök nedenleri ortaya çıkarmak ve değişimi somut olarak kanıtlamaktır.
+          </p>
         </div>
-        <div class="diagnosis-grid">
-          <div class="diagnosis-card"><strong>Erişilebilirlik ve keşfedilebilirlik</strong><span>Yapay zekâ ve arama tarayıcıları sitenize ve önemli sayfalarınıza sorunsuz ulaşabiliyor mu?</span></div>
-          <div class="diagnosis-card"><strong>Marka kimliği</strong><span>Marka adı, şubeler, hizmetler, adresler ve diğer işletme bilgileri farklı kaynaklarda aynı ve anlaşılır mı?</span></div>
-          <div class="diagnosis-card"><strong>Sorgu ile içerik uyumu</strong><span>Sitenizde müşterilerin gerçekten sorduğu satın alma, karşılaştırma ve öneri sorularını doğrudan karşılayan içerikler var mı?</span></div>
-          <div class="diagnosis-card"><strong>Otorite ve güven</strong><span>Markanız güvenilir bağımsız sitelerde, sektör kaynaklarında ve yerel kaynaklarda yeterince yer alıyor mu?</span></div>
-          <div class="diagnosis-card"><strong>Kaynak gösterilebilirlik</strong><span>İçerikleriniz yapay zekânın anlayabileceği, doğrulayabileceği ve gerektiğinde kaynak gösterebileceği kadar açık ve yapılandırılmış mı?</span></div>
-          <div class="diagnosis-card"><strong>Rakip farkı</strong><span>Rakipler hangi sorularda, hangi kaynakların desteğiyle sizden daha fazla öneriliyor?</span></div>
-        </div>
-      </div>
 
-      <div class="shell visual-section">
-        <div class="visual-copy">
-          <span class="kicker">Teşhisin görsel özeti</span>
-          <h3>Tek bir “puan” yerine, görünürlüğü etkileyen nedenleri birbirinden ayırıyoruz.</h3>
-          <p>Örneğin sorun içerikteyse yeni içerik planı; teknik erişimdeyse tarama düzeltmesi; güvenilir kaynaklarda görünürlük eksikse kaynak ve otorite çalışması önerilir. Böylece bütçe yanlış probleme harcanmaz.</p>
+        <div class="pipeline-flow" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">ADIM 01</span>
+            <h3>Pazarı ve Markayı Tanımla</h3>
+            <p>İşletme adı, sektör, coğrafi konum, ana rakipler ve müşterilerin gerçek satın alma/öneri sorgularını belirleriz.</p>
+          </div>
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">ADIM 02</span>
+            <h3>Yapay Zekâda Ölç</h3>
+            <p>Gerçek ticari niyetli sorgularla yapay zekâ motorlarını tarar; marka görünümü, önerilme sırası ve kaynak referanslarını toplarız.</p>
+          </div>
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">ADIM 03</span>
+            <h3>Kanıt Doğrulaması</h3>
+            <p>Toplanan arama gözlemleri ve kaynak kapsamı denetlenir. Yeterli kanıt oluşmadan asla varsayımsal teşhis üretilmez.</p>
+          </div>
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">ADIM 04</span>
+            <h3>Kök Neden Teşhisi</h3>
+            <p>İçerik açığı, marka kimliği tutarsızlığı, otorite eksikliği veya teknik tarama engelleri gibi somut kök nedenleri ayrıştırırız.</p>
+          </div>
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">ADIM 05</span>
+            <h3>Düzeltme Reçetesi</h3>
+            <p>Hangi sayfanın, hangi yapılandırılmış verinin veya hangi üçüncü taraf kaynak profilinin düzeltileceğini belirleriz.</p>
+          </div>
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">ADIM 06</span>
+            <h3>Aynı Sorgularla Yeniden Ölç</h3>
+            <p>Düzeltmeler tamamlandıktan sonra aynı benchmark sorgularını yeniden çalıştırarak iyileşmeyi kanıtlarız.</p>
+          </div>
         </div>
-        <figure class="visual-story">
-          <img src="./assets/diagnosis-map.svg?v=20260918-1" alt="Erişilebilirlik, marka kimliği, içerik uyumu, otorite, kaynak görünürlüğü ve rakip farkını kök neden teşhisine bağlayan şema" width="1200" height="620" loading="lazy" />
-          <figcaption>Temsili şema: gerçek teşhis, canlı ölçüm ve müşteri sitesinden elde edilen kanıtlara göre oluşturulur.</figcaption>
-        </figure>
       </div>
     </section>
 
-    <section class="section shell">
+    <!-- ============================================================
+         5. EVIDENCE INTELLIGENCE (Kanıt Mantığı)
+         ============================================================ -->
+    <section class="section shell" id="evidence">
       <div class="section-heading">
-        <span class="kicker">Neyi ölçüyoruz?</span>
-        <h2>Yapay zekâ cevaplarında ne kadar görünür ve ne kadar öncelikli olduğunuzu birden fazla sinyalle ölçüyoruz.</h2>
-        <p>AI cevapları klasik 1–10 sıralama değildir. Bu yüzden görünürlüğü birden fazla sinyalle değerlendiririz.</p>
+        <span class="kicker">Kanıt Şeffaflığı</span>
+        <h2>AIVR eksik veriden varsayım üretmez.</h2>
+        <p class="lead-text">
+          Geleneksel araçlar eksik verileri varsayımsal ortalamalarla doldurabilir. AIVR mimarisi ise kanıt temelli çalışır.
+        </p>
       </div>
-      <div class="metric-grid four">
-        <div class="metric"><strong>Görünme Oranı</strong><span>Markanın kaç sorguda göründüğü.</span></div>
-        <div class="metric"><strong>Önerilme Oranı</strong><span>Kaç sorguda doğrudan önerildiği.</span></div>
-        <div class="metric"><strong>Cevapta Öncelikli Görünüm</strong><span>Markanın cevabın ana önerisi mi, ilk seçeneklerden biri mi, yalnızca bir yerde anılan seçenek mi olduğunu ölçeriz.</span></div>
-        <div class="metric"><strong>Kaynak Gösterilme Oranı</strong><span>Marka veya siteyi destekleyen kaynak kullanımı.</span></div>
-        <div class="metric"><strong>Görünürlük Payı</strong><span>Markanın rakiplere karşı görünürlük payı.</span></div>
-        <div class="metric"><strong>Görünürlük Kör Noktaları</strong><span>Yüksek değerli ama markanın kaybolduğu sorgular.</span></div>
-        <div class="metric"><strong>Kaynak Kapsaması</strong><span>AI'ın kullandığı kaynaklarda marka kapsaması.</span></div>
-        <div class="metric"><strong>Tutarlılık</strong><span>Aynı tema ve sorgu ailesinde tekrar edilebilirlik.</span></div>
+
+      <div class="pipeline-flow">
+        <div class="pipeline-card">
+          <span class="pipeline-step-num">GİRDİ</span>
+          <h3>Arama Gözlemleri</h3>
+          <p>Çoklu yapay zekâ sağlayıcısından toplanan ham yanıtlar ve alıntılanan referans linkleri.</p>
+        </div>
+        <div class="pipeline-card">
+          <span class="pipeline-step-num">KONTROL</span>
+          <h3>Kaynak Kapsamı</h3>
+          <p>Sektörde güven kabul edilen üçüncü taraf rehber, platform ve otorite sitelerinde marka varlığı.</p>
+        </div>
+        <div class="pipeline-card">
+          <span class="pipeline-step-num">KURAL</span>
+          <h3>Yeterlilik Kapısı</h3>
+          <p>Kanıt havuzu eksikse durum <code>EVIDENCE_PENDING</code> kalır; uydurma rapor oluşturulmaz.</p>
+        </div>
+        <div class="pipeline-card">
+          <span class="pipeline-step-num">ÇIKTI</span>
+          <h3>Müşteri Raporu</h3>
+          <p>Doğrulanmış kanıtlarla desteklenen kök neden teşhisi, karşılaştırmalı rakip analizi ve aksiyon planı.</p>
+        </div>
+      </div>
+
+      <div class="evidence-policy-card">
+        <div class="policy-icon" aria-hidden="true">!</div>
+        <div>
+          <h4>AIVR Kanıt Uydurmama İlkesi</h4>
+          <p>
+            Eksik kanıt varsa sistem asla rastgele sonuç üretmez. Rapor ancak gerekli gözlemler ve kaynak kapsamı tam olarak doğrulandığında
+            <code>REPORT_READY</code> durumuna geçer. Bu sayede müşterilerimize yanıltıcı değil, tamamen denetlenebilir kanıtlar sunarız.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="fix">
-      <div class="shell split">
-        <div class="section-heading left">
-          <span class="kicker">Optimizasyon karar motoru</span>
-          <h2>Sorunu bulmakla kalmıyoruz; hangi düzeltmenin neden yapılacağını ve hangi sinyali iyileştirmesini beklediğimizi belirliyoruz.</h2>
-          <p>İçerik kalitesi, güven, marka kimliği ve kaynak gücü gibi alanları; resmî platform rehberleri, AIVR'ın gerçek ölçümleri ve uzmanlık yöntemleriyle birlikte değerlendiririz. Gerçek ölçüm her zaman teorik öneriden daha önceliklidir.</p>
+    <!-- ============================================================
+         6. CUSTOMER REPORT / REPORT CENTER SHOWCASE
+         ============================================================ -->
+    <section class="section section-dark" id="reports">
+      <div class="shell">
+        <div class="section-heading">
+          <span class="kicker">Rapor Merkezi Vitrini</span>
+          <h2>Doğrulanmış Müşteri Raporları ve Durum Ayrımı</h2>
+          <p class="lead-text">
+            AIVR Rapor Merkezi; her işletmenin denetim durumunu, kanıt tamamlanma seviyesini ve dışa aktarım dosyalarını şeffafça gösterir.
+          </p>
         </div>
-        <div class="evidence-stack">
-          <div class="evidence-row"><b>A</b><div><strong>Resmî kaynaklar</strong><span>OpenAI, Google ve diğer platformların yayımladığı resmî teknik rehberler.</span></div></div>
-          <div class="evidence-row"><b>B</b><div><strong>Gerçek AIVR ölçümü</strong><span>Gerçek yapay zekâ sorgularında elde ettiğimiz marka, rakip ve kaynak sonuçları.</span></div></div>
-          <div class="evidence-row"><b>C</b><div><strong>Uzmanlık yöntemleri</strong><span>CORE-EEAT, CITE ve benzeri kalite kontrol yöntemleri; karar destek amaçlı kullanılır.</span></div></div>
-        </div>
-      </div>
 
-      <div class="shell fix-grid">
-        <article class="fix-card"><span class="fix-badge">MEVCUT SİTE</span><h3>Mevcut siteyi düzelt</h3><p>Tarama erişimi, yapılandırılmış veri, sayfa başlıkları/açıklamaları, site içi bağlantılar ve marka kimliği tutarlılığı ve kritik sayfa problemlerini gideririz.</p></article>
-        <article class="fix-card"><span class="fix-badge">İÇERİK</span><h3>Eksik sorguları kapsa</h3><p>Gerçek ticari niyet ve rakip boşluğuna göre hedef sayfalar, sık sorulan sorular, karşılaştırma sayfaları ve yerel içerikler üretiriz.</p></article>
-        <article class="fix-card"><span class="fix-badge">OTORİTE</span><h3>Kaynak görünürlüğü farkını kapat</h3><p>Rakipleri destekleyen üçüncü taraf kaynakları bulur, marka varlığı ve güven sinyalleri için aksiyon planı çıkarırız.</p></article>
-        <article class="fix-card"><span class="fix-badge">YENİDEN KURULUM</span><h3>Gerekirse yeni site</h3><p>Mevcut yapı parçalı düzeltmeye uygun değilse, aynı alan adı için canlı siteye dokunmadan önizleme ortamında yapay zekâ aramalarına uygun yeni sürüm hazırlayıp onay sonrası devreye alırız.</p></article>
+        <div class="report-center-grid">
+          <!-- Card 1: Ready -->
+          <div class="report-card">
+            <div class="report-card-top">
+              <div>
+                <h3>Örnek Medikal Klinik</h3>
+                <div class="report-card-meta">Rapor ID: REP-2026-0919-01 · 19.09.2026</div>
+              </div>
+              <span class="badge badge-ready">REPORT_READY</span>
+            </div>
+            <div class="report-card-body">
+              <strong>Kanıt Durumu:</strong> Eksiksiz (%100 doğrulandı)<br />
+              <strong>Teşhis:</strong> Yerel aramalarda güçlü, ancak ticari öneri sorgularında 8 bağımsız kaynak açığı mevcut.
+            </div>
+            <div class="report-card-footer">
+              <div class="report-card-exports">
+                <span class="export-chip">JSON</span>
+                <span class="export-chip">Markdown</span>
+                <span class="export-chip">HTML</span>
+                <span class="export-chip">PDF</span>
+              </div>
+              <a class="text-link" href="./sample-report.html?v=20260919-v1" style="margin: 0; font-size: 13px;">Raporu Görüntüle →</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Pending Evidence -->
+          <div class="report-card">
+            <div class="report-card-top">
+              <div>
+                <h3>Örnek Yerel Hukuk Bürosu</h3>
+                <div class="report-card-meta">Rapor ID: REP-2026-0919-02 · 19.09.2026</div>
+              </div>
+              <span class="badge badge-pending">EVIDENCE_PENDING</span>
+            </div>
+            <div class="report-card-body">
+              <strong>Kanıt Durumu:</strong> Kaynak kapsamı taranıyor<br />
+              <strong>Açıklama:</strong> Bölgesel baro ve bağımsız hukuk dizinlerindeki referanslar doğrulanana kadar rapor bekletilir.
+            </div>
+            <div class="report-card-footer">
+              <span style="color: var(--status-pending); font-size: 12px; font-weight: 600;">Kanıtlar bekleniyor (Uydurma veri engellendi)</span>
+              <span class="badge badge-version">BEKLEMEDE</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- ============================================================
+         7. BEFORE / AFTER PROOF (Kanıt)
+         ============================================================ -->
     <section class="section shell" id="proof">
       <div class="section-heading">
         <span class="kicker">Önce / Sonra Kanıtı</span>
-        <h2>Yaptığımız çalışmaların gerçekten sonuç üretip üretmediğini aynı sorgularla yeniden ölçeriz.</h2>
-        <p>Aynı benchmark sorgularını tekrar çalıştırır, artışı ve kalan sorunları açıkça gösteririz.</p>
+        <h2>Çalışmalarımızın sonucunu aynı sorgularla kanıtlıyoruz.</h2>
+        <p class="lead-text">
+          Düzeltmelerden sonra rastgele kolay sorgular seçip başarı iddia etmeyiz; ilk denetimde kullanılan aynı benchmark sorgularını yeniden ölçeriz.
+        </p>
       </div>
 
-      <div class="proof-table" role="table" aria-label="Temsili önce sonra karşılaştırması">
-        <div class="proof-row proof-head" role="row"><span>Metrik</span><span>Önce</span><span>Sonra</span><span>Değişim</span></div>
-        <div class="proof-row" role="row"><span>AI Görünürlüğü</span><b>%23</b><b>%47</b><em>+24 puan</em></div>
-        <div class="proof-row" role="row"><span>Önerilme Oranı</span><b>%13</b><b>%34</b><em>+21 puan</em></div>
-        <div class="proof-row" role="row"><span>Öncelikli önerilerde görünüm</span><b>2</b><b>9</b><em>+7</em></div>
-        <div class="proof-row" role="row"><span>Görünürlük Kör Noktaları</span><b>17</b><b>8</b><em>-9</em></div>
+      <div class="proof-table" role="table" aria-label="Temsili Önce ve Sonra Karşılaştırma Tablosu">
+        <div class="proof-row proof-head" role="row">
+          <span>Metrik</span>
+          <span>Önce</span>
+          <span>Sonra</span>
+          <span>Değişim</span>
+        </div>
+        <div class="proof-row" role="row">
+          <span>AI Görünürlüğü</span>
+          <b>%23</b>
+          <b>%47</b>
+          <em>+24 puan</em>
+        </div>
+        <div class="proof-row" role="row">
+          <span>Önerilme Oranı</span>
+          <b>%13</b>
+          <b>%34</b>
+          <em>+21 puan</em>
+        </div>
+        <div class="proof-row" role="row">
+          <span>Öncelikli Önerilerde Görünüm</span>
+          <b>2 sorgu</b>
+          <b>9 sorgu</b>
+          <em>+7 sorgu</em>
+        </div>
+        <div class="proof-row" role="row">
+          <span>Görünürlük Kör Noktaları</span>
+          <b>17 açık</b>
+          <b>8 açık</b>
+          <em>-9 açık kapatıldı</em>
+        </div>
       </div>
 
-      <figure class="visual-story proof-visual">
-        <img src="./assets/before-after-proof.svg?v=20260918-1" alt="Aynı yapay zekâ sorgusunda markanın önce görünmediği, düzeltmelerden sonra öneriler arasında yer aldığı temsili önce ve sonra karşılaştırması" width="1200" height="560" loading="lazy" />
-        <figcaption><strong>Kanıt yaklaşımı:</strong> Düzeltmeden sonra başka bir sorgu seçip başarı göstermeyiz; mümkün olduğunca aynı karşılaştırma sorgularını yeniden çalıştırırız.</figcaption>
+      <figure class="visual-story" style="max-width: 900px; margin-inline: auto;">
+        <img src="./assets/before-after-proof.svg?v=20260919-v1" alt="Yapay zekâ sorgusunda marka görünürlüğünün önce ve sonraki durumunu gösteren temsili karşılaştırma grafiği" width="1200" height="560" loading="lazy" />
+        <figcaption>
+          <strong>Kanıt Yaklaşımı:</strong> Temsili örnektir. Belirli bir sıralama veya görünürlük garantisi verilmez; tüm değişimler aynı sorgu setiyle ölçülerek raporlanır.
+        </figcaption>
       </figure>
-
-      <p class="illustrative center">Tamamı temsili örnektir. Belirli bir sıralama veya artış garanti edilmez; gerçek sonuçlar ölçülerek raporlanır.</p>
     </section>
 
-    <section class="section section-dark" id="trust">
-      <div class="shell split">
-        <div class="section-heading left">
-          <span class="kicker">Güvenli uygulama</span>
-          <h2>Siteniz ve alan adınız sizin kontrolünüzde kalır.</h2>
-          <p>Teknik düzeltme veya siteyi yeniden kurmak gerektiğinde ana şifrenizi istemeden, mümkün olan en düşük yetkiyle ve geri dönüş planıyla çalışırız.</p>
+    <!-- ============================================================
+         8. EXPORTS SECTION (Dışa Aktarım Yetenekleri)
+         ============================================================ -->
+    <section class="section section-dark" id="exports">
+      <div class="shell">
+        <div class="section-heading">
+          <span class="kicker">Esnek Çıktılar</span>
+          <h2>4 Farklı Formatta Dışa Aktarım Desteği</h2>
+          <p class="lead-text">
+            Denetim tamamlandığında raporlar harici sağlayıcı çağrısı yapılmadan doğrudan yerel kanıtlardan derlenir.
+          </p>
         </div>
-        <div class="trust-list">
-          <div><span>✓</span><p><strong>Alan adı sizde</strong>Alan adı sahipliğini devralmayız.</p></div>
-          <div><span>✓</span><p><strong>Önce güvenli önizleme</strong>Yeni sürüm canlı siteye dokunmadan ayrı bir test ortamında hazırlanır.</p></div>
-          <div><span>✓</span><p><strong>Onaysız yayın yok</strong>Canlı yayına geçiş yalnız müşteri onayından sonra yapılır.</p></div>
-          <div><span>✓</span><p><strong>Yedek + geri dönüş planı</strong>Canlıya almadan önce eski sürüme güvenli dönüş noktası hazırlanır.</p></div>
-          <div><span>✓</span><p><strong>E-posta kayıtları korunur</strong>Standart web geçişinde mail DNS kayıtlarına dokunulmaz.</p></div>
+
+        <div class="exports-grid">
+          <div class="export-card">
+            <span class="export-tag">JSON</span>
+            <h3>JSON Entegrasyonu</h3>
+            <p>Geliştiriciler ve veri ekipleri için tam yapılandırılmış ham ve işlenmiş denetim verisi.</p>
+          </div>
+          <div class="export-card">
+            <span class="export-tag">MARKDOWN</span>
+            <h3>Markdown Dokümanı</h3>
+            <p>İçerik yazarları ve teknik ekipler için düzenlenebilir, hafif dokümantasyon formatı.</p>
+          </div>
+          <div class="export-card">
+            <span class="export-tag">HTML</span>
+            <h3>İnteraktif Web Raporu</h3>
+            <p>Herhangi bir modern tarayıcıda hemen görüntülenebilen, filtreli görsel müşteri raporu.</p>
+          </div>
+          <div class="export-card">
+            <span class="export-tag">PDF</span>
+            <h3>Yönetim Özeti PDF</h3>
+            <p>Müşteriler, yönetim kurulu ve karar vericilerle doğrudan paylaşılabilecek kurumsal format.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ============================================================
+         9. PRICING / SERVICE MODEL (Paketler)
+         ============================================================ -->
     <section class="section shell" id="pricing">
       <div class="section-heading">
-        <span class="kicker">Başlangıç paketleri</span>
-        <h2>Önce teşhis. Sonra yalnız gereken çözüm.</h2>
-        <p>Her müşteriye web sitesi satmak yerine, kök nedene göre doğru müdahaleyi öneririz.</p>
+        <span class="kicker">Hizmet Seçenekleri</span>
+        <h2>Önce Teşhis. Sonra Gereken Çözüm.</h2>
+        <p class="lead-text">
+          Gereksiz web sitesi veya genel SEO paketleri satmıyoruz. Kök nedene göre doğru müdahaleyi planlıyoruz.
+        </p>
       </div>
+
       <div class="pricing-grid">
-        <article class="price-card">
-          <span class="price-name">Ücretsiz Mini Görünürlük Kontrolü</span>
-          <div class="price">Ücretsiz</div>
+        <div class="price-card">
+          <span class="price-name">Ücretsiz Mini Kontrol</span>
+          <div class="price-amount">Ücretsiz</div>
           <ul>
             <li>Seçilmiş ticari niyetli sorgular</li>
-            <li>Aktif AI sağlayıcılarında ilk görünürlük kontrolü</li>
+            <li>Aktif AI sağlayıcılarında ilk görünürlük sinyalleri</li>
             <li>Temel rakip ve kör nokta özeti</li>
-            <li>İlk teşhis sinyalleri</li>
+            <li>Ön değerlendirme çıktısı</li>
           </ul>
-          <a class="button secondary full" href="#free-check">Ücretsiz başlat</a>
-        </article>
+          <a class="button secondary full" href="#free-check">Ücretsiz Başlat</a>
+        </div>
 
-        <article class="price-card featured">
-          <span class="badge">ÇEKİRDEK</span>
+        <div class="price-card featured">
+          <span class="badge badge-ready">ÖNERİLEN</span>
           <span class="price-name">AI Görünürlük Teşhisi</span>
-          <div class="price">4.900 TL</div>
+          <div class="price-amount">4.900 TL</div>
           <ul>
-            <li>30+ ticari niyetli sorgu</li>
-            <li>Görünme / önerilme / cevaptaki öncelikli konum ölçümü</li>
-            <li>Rakip + kaynak gösterimi + kaynak görünürlüğü farkı</li>
-            <li>Kök neden teşhisi</li>
+            <li>30+ ticari niyetli derin sorgu seti</li>
+            <li>Görünme / Önerilme / Öncelikli konum analizi</li>
+            <li>Rakip ve kaynak kapsamı açığı tespiti</li>
+            <li>Kök neden teşhisi (İçerik, Kimlik, Otorite)</li>
             <li>Öncelikli düzeltme reçetesi</li>
-            <li>Profesyonel rapor</li>
+            <li>4 formatta (JSON, MD, HTML, PDF) rapor</li>
           </ul>
-          <a class="button primary full" href="#free-check">Önce ücretsiz kontrol</a>
-        </article>
+          <a class="button primary full" href="#free-check">Önce Ücretsiz Başla</a>
+        </div>
 
-        <article class="price-card">
-          <span class="price-name">Yönetilen AI Görünürlük Geliştirme</span>
-          <div class="price">Teklif</div>
+        <div class="price-card">
+          <span class="price-name">Yönetilen Görünürlük Geliştirme</span>
+          <div class="price-amount">Teklif</div>
           <ul>
-            <li>Teşhis + uygulama</li>
-            <li>Mevcut site düzeltmeleri / içerik / yapılandırılmış veri / marka kimliği</li>
-            <li>Kaynak ve otorite farkını kapatma çalışması</li>
-            <li>Gerekirse yapay zekâ aramalarına uygun yeni site kurulumu</li>
-            <li>Önce / sonra yeniden ölçüm</li>
-            <li>Aylık izleme seçeneği</li>
+            <li>Kapsamlı teşhis + fiili uygulama desteği</li>
+            <li>Mevcut site düzeltmeleri / Yapılandırılmış veri / NAP</li>
+            <li>Üçüncü taraf otorite ve kaynak kapatma çalışmaları</li>
+            <li>Gerektiğinde AI uyumlu yeni site kurulumu</li>
+            <li>Aynı sorgularla önce / sonra yeniden ölçüm</li>
+            <li>Aylık periyodik izleme opsiyonu</li>
           </ul>
-          <a class="button secondary full" href="#free-check">Ön analiz iste</a>
-        </article>
+          <a class="button secondary full" href="#free-check">Ön Görüşme İste</a>
+        </div>
       </div>
     </section>
 
+    <!-- ============================================================
+         10. TRUST (Güvenli Çalışma)
+         ============================================================ -->
+    <section class="section section-dark" id="trust">
+      <div class="shell" style="max-width: 960px;">
+        <div class="section-heading">
+          <span class="kicker">Güvenlik ve Mülkiyet</span>
+          <h2>Web siteniz ve dijital varlıklarınız sizin kontrolünüzde kalır.</h2>
+          <p class="lead-text">
+            Teknik düzeltmelerde veya yeni yapılandırmalarda ana şifrelerinizi talep etmeden, en düşük yetki prensibiyle ve geri dönüş planıyla çalışırız.
+          </p>
+        </div>
+
+        <div class="pipeline-flow" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">MÜLKİYET</span>
+            <h3>Alan Adı ve Hesaplar Sizde</h3>
+            <p>Alan adı, hosting veya Google profillerinizin mülkiyetini asla üzerimize almayız.</p>
+          </div>
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">GÜVENLİ TEST</span>
+            <h3>Önce Ayrı Test Ortamı</h3>
+            <p>Yeni veya düzeltilmiş sayfalar canlı sitenize dokunmadan ayrı bir önizleme alanında hazırlanır.</p>
+          </div>
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">ONAY</span>
+            <h3>Onaysız Canlıya Alım Yok</h3>
+            <p>Canlı yayına geçiş veya yayınlama adımları yalnızca yazılı onayınızın ardından gerçekleştirilir.</p>
+          </div>
+          <div class="pipeline-card">
+            <span class="pipeline-step-num">YEDEKLEME</span>
+            <h3>Geri Dönüş Noktası</h3>
+            <p>Herhangi bir teknik müdahaleden önce mevcut durumun tam yedeği ve geri dönüş planı hazırlanır.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         11. FREE ANALYSIS LEAD FORM (V1 Aligned)
+         ============================================================ -->
     <section class="section shell" id="free-check">
       <div class="lead-panel">
-        <div>
-          <span class="kicker">Ücretsiz mini analiz</span>
-          <h2>AI neden rakiplerinizi öneriyor, ilk sinyali görün.</h2>
-          <p>Web sitenizi, sektörünüzü ve varsa ana rakiplerinizi gönderin. İlk görünürlük kontrolüyle nereden başlamamız gerektiğini belirleyelim.</p>
+        <div class="lead-info-side">
+          <span class="kicker">Ücretsiz Ön Değerlendirme</span>
+          <h2>Yapay zekâ neden rakiplerinizi öneriyor, ilk sinyali görün.</h2>
+          <p class="lead-text">
+            İşletmenizi ve pazarınızı iletin. Aktif yapay zekâ kapsamımıza göre ilk görünürlük, kaynak ve rakip sinyallerinizi inceleyelim.
+          </p>
+
           <div class="lead-points">
-            <span>✓ Kart bilgisi gerekmez</span>
-            <span>✓ Teknik bilgi gerekmez</span>
-            <span>✓ Aktif ölçüm kapsamı açıkça belirtilir</span>
+            <span><strong>✓</strong> Kredi kartı veya ödeme gerekmez</span>
+            <span><strong>✓</strong> Web sitesi zorunlu değildir (yerel işletmeler dahil)</span>
+            <span><strong>✓</strong> Aktif ölçüm kapsamı raporda şeffafça belirtilir</span>
+            <span><strong>✓</strong> Değerlendirme çıktısı e-posta adresinize iletilir</span>
           </div>
         </div>
 
         <form id="audit-form" class="audit-form" method="POST" action="#">
-          <input type="hidden" name="_subject" value="AI Visibility Radar | Yeni Ücretsiz Mini Analiz Talebi" />
+          <input type="hidden" name="_subject" value="AI Visibility Radar | Yeni Ön Görünürlük Kontrolü Talebi" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_next" value="https://nedim-ucarsu.github.io/tubeforge-pages/ai-visibility-radar/thanks.html" />
           <input type="hidden" name="_url" value="https://nedim-ucarsu.github.io/tubeforge-pages/ai-visibility-radar/" />
-          <input type="hidden" name="_autoresponse" value="Talebinizi aldık. AI Visibility Radar mini analiziniz için bilgileri inceleyip size e-posta üzerinden dönüş yapacağız." />
+          <input type="hidden" name="_autoresponse" value="Talebinizi aldık. AI Visibility Radar ön görünürlük değerlendirmeniz için bilgileri inceleyip e-posta üzerinden dönüş yapacağız." />
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-10000px;opacity:0;height:1px;width:1px" aria-hidden="true" />
 
-          <label>Şirket / marka<input name="Marka" required autocomplete="organization" placeholder="Örnek Marka" /></label>
-          <label>Web sitesi<input name="Web_Sitesi" required type="url" placeholder="https://ornek.com" /></label>
-
-          <div class="form-row">
-            <label>Ülke<input name="Ulke" required placeholder="Türkiye" /></label>
-            <label>Sektör<input name="Sektor" required placeholder="Restoran, e-ticaret, hukuk..." /></label>
+          <div class="form-group">
+            <label for="input-marka">İşletme / Marka Adı <span class="req">*</span></label>
+            <input id="input-marka" name="Marka" required autocomplete="organization" placeholder="Örnek: Lotus Sağlık Merkezi" />
           </div>
 
-          <label>Ana rakipler <span>(isteğe bağlı)</span><input name="Ana_Rakip" placeholder="Rakip A, Rakip B" /></label>
-          <label>E-posta <span>(analiz sonucu için)</span><input name="email" required type="email" autocomplete="email" placeholder="siz@sirket.com" /></label>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="input-kategori">Kategori / Sektör <span class="req">*</span></label>
+              <input id="input-kategori" name="Kategori" required placeholder="Örnek: Medikal Estetik, Hukuk..." />
+            </div>
+            <div class="form-group">
+              <label for="input-sehir">Şehir <span class="req">*</span></label>
+              <input id="input-sehir" name="Sehir" required placeholder="Örnek: İstanbul" />
+            </div>
+          </div>
 
-          <label class="consent"><input name="KVKK_Onay" type="checkbox" value="Onaylandi" required /><span>Bu formdaki bilgilerin ücretsiz mini analiz talebimin değerlendirilmesi ve benimle iletişim kurulması amacıyla işlenmesini kabul ediyorum.</span></label>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="input-ilce">İlçe <span class="opt">(İsteğe bağlı)</span></label>
+              <input id="input-ilce" name="Ilce" placeholder="Örnek: Kadıköy" />
+            </div>
+            <div class="form-group">
+              <label for="input-website">Web Sitesi <span class="opt">(İsteğe bağlı)</span></label>
+              <input id="input-website" name="Web_Sitesi" type="url" placeholder="https://ornek.com" />
+            </div>
+          </div>
 
-          <button class="button primary full" type="submit">Ücretsiz görünürlük kontrolünü başlat</button>
-          <p class="form-status" id="form-status" role="status">Başvurunuz güvenli biçimde iletilir.</p>
+          <div class="form-group">
+            <label for="input-gmb">Google İşletme Profili <span class="opt">(İsteğe bağlı)</span></label>
+            <input id="input-gmb" name="Google_Isletme_Profili" placeholder="Harita bağlantısı veya profil adı" />
+          </div>
+
+          <div class="form-group">
+            <label for="input-rakipler">Ana Rakipler <span class="opt">(İsteğe bağlı)</span></label>
+            <input id="input-rakipler" name="Ana_Rakip" placeholder="Örnek: Rakip A, Rakip B" />
+          </div>
+
+          <div class="form-group">
+            <label for="input-email">E-posta <span class="req">*</span> <span class="opt">(Analiz sonucu için)</span></label>
+            <input id="input-email" name="email" required type="email" autocomplete="email" placeholder="adiniz@sirket.com" />
+          </div>
+
+          <label class="consent-label">
+            <input name="KVKK_Onay" type="checkbox" value="Onaylandi" required />
+            <span>Formdaki bilgilerin ücretsiz ön değerlendirme talebimin incelenmesi ve benimle iletişim kurulması amacıyla işlenmesini kabul ediyorum.</span>
+          </label>
+
+          <button class="button primary full" type="submit">Ücretsiz Ön Görünürlük Kontrolünü Başlat</button>
+          <p class="form-status" id="form-status" role="status">Başvurunuz güvenli SSL bağlantısıyla iletilir.</p>
         </form>
       </div>
     </section>
   </main>
 
+  <!-- ============================================================
+       12. FOOTER
+       ============================================================ -->
   <footer class="footer shell">
-    <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>AI Visibility Radar</span></div>
-    <p>Ölç. Teşhis et. Düzelt. Tekrar ölç.</p>
-    <p class="fine">AI görünürlüğü dinamik ve sağlayıcıya göre değişkendir. Belirli bir sıralama veya önerilme sonucu garanti edilmez.</p>
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>AI Visibility Radar</span>
+    </div>
+    <p>Ölç. Teşhis Et. Düzelt. Tekrar Ölç.</p>
+    <p class="fine">
+      AI Visibility Radar v1.8.6.9 · Yapay zekâ görünürlüğü dinamik ve sağlayıcıya göre değişkendir.
+      Belirli bir sıralama veya tavsiye sonucu garanti edilmez.
+      <a href="./product-truth.json" style="color: var(--accent); margin-left: 8px;">Ürün Gerçekliği (JSON)</a>
+    </p>
   </footer>
 
-  <script src="./app.js?v=tr-20260918-2"></script>
+  <script src="./app.js?v=20260919-v1"></script>
 </body>
 </html>

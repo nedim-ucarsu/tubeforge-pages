@@ -1,0 +1,48 @@
+{
+  "product": "AI Visibility Radar",
+  "public_product_version": "1.8.6.9",
+  "capability_sync_date": "2026-09-19",
+  "capabilities": {
+    "local_business_audit": true,
+    "website_optional": true,
+    "evidence_pending": true,
+    "customer_reports": true,
+    "report_center": true,
+    "exports": [
+      "json",
+      "markdown",
+      "html",
+      "pdf"
+    ],
+    "zero_provider_calls_on_finalize": true,
+    "evidence_not_fabricated": true
+  },
+  "states": {
+    "audit": [
+      "AUDIT_IDLE",
+      "AUDIT_RUNNING"
+    ],
+    "evidence": [
+      "EVIDENCE_PENDING",
+      "EVIDENCE_COMPLETE"
+    ],
+    "report": [
+      "REPORT_READY",
+      "REPORT_ERROR"
+    ]
+  },
+  "lead_form": {
+    "required_fields": [
+      "Marka",
+      "Kategori",
+      "Sehir",
+      "email"
+    ],
+    "optional_fields": [
+      "Ilce",
+      "Web_Sitesi",
+      "Google_Isletme_Profili",
+      "Ana_Rakip"
+    ]
+  }
+}
