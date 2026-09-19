@@ -25,9 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const brand = qs('#quick-brand').value.trim();
     const category = qs('#quick-category').value.trim();
     const city = qs('#quick-city').value.trim();
+    const website = qs('#quick-website')?.value.trim() || '';
     qs('#businessName').value = brand;
     qs('#category').value = category;
     qs('#city').value = city;
+    if (qs('#website')) qs('#website').value = website;
     setSelectedPlan('Ücretsiz Ön Değerlendirme');
     qs('#lead-form-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     window.setTimeout(() => qs('#email')?.focus(), 450);
@@ -102,6 +104,19 @@ document.addEventListener('DOMContentLoaded', () => {
     required.forEach(([id,msg]) => { const el = qs(`#${id}`); if (!el?.value.trim()) { error(id).textContent = msg; ok = false; } });
     const email = qs('#email');
     if (email?.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { error('email').textContent = 'Geçerli bir e-posta adresi girin.'; ok = false; }
+    const website = qs('#website');
+    if (website?.value.trim()) {
+      const raw = website.value.trim();
+      const candidate = /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+      try {
+        const parsed = new URL(candidate);
+        if (!parsed.hostname || !parsed.hostname.includes('.')) throw new Error('invalid-host');
+        website.value = parsed.href.replace(/\/$/, '');
+      } catch {
+        error('website').textContent = 'Geçerli bir web sitesi adresi girin veya alanı boş bırakın.';
+        ok = false;
+      }
+    }
     if (!qs('#kvkkConsent')?.checked) { error('kvkkConsent').textContent = 'Aydınlatma ve gizlilik metnini okuyup onaylamanız gerekir.'; ok = false; }
     return ok;
   };

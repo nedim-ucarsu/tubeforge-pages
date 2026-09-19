@@ -13,3 +13,60 @@
 @media(max-width:700px){.truth-hide{display:none}.truth-strip{font-size:9.5px;gap:7px}.shell,.narrow{width:min(100% - 28px,var(--max))}.hero{padding-top:42px}.hero h1{font-size:38px}.hero-lead{font-size:15px}.hero-actions .btn{width:100%}.assessment-head{align-items:flex-start}.soft-badge{display:none}.quick-form{grid-template-columns:1fr}.quick-form label:last-of-type{grid-column:auto}.assessment-foot,.insight-banner,.submit-row,.modal-footer,.footer-bottom{align-items:stretch;flex-direction:column}.assessment-foot .btn,.submit-row .btn,.modal-footer .btn{width:100%}.section{padding:68px 0}.section-head{margin-bottom:32px}.section-head h2{font-size:30px}.form-grid.two{grid-template-columns:1fr}.lead-card{padding:20px}.footer-grid{grid-template-columns:1fr}.footer-brand{grid-column:auto}.metric-grid{grid-template-columns:1fr 1fr;padding:16px}.benchmark-copy{padding:18px 16px 0}.benchmark-card>.disclaimer{padding:0 16px 18px}.modal-dialog{padding:22px 18px}.modal-metrics{grid-template-columns:1fr 1fr}.brand small{display:none}}
 @media(max-width:410px){.hero h1{font-size:33px}.hero-pills{display:grid}.platforms{display:grid;grid-template-columns:1fr 1fr}.modal-metrics,.metric-grid{grid-template-columns:1fr}.price{font-size:32px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* AIVR landing UX polish — 2026-09-19 */
+.truth-strip{min-height:24px;padding:4px 14px;font-size:10.5px}
+.nav-wrap{height:62px;gap:20px}
+.brand-mark{width:36px;height:36px;border-radius:11px}
+.brand b{font-size:18px}
+.desktop-nav{gap:22px}
+.nav-cta{min-height:42px;padding:0 16px;font-size:12px;white-space:nowrap}
+.hero{padding:48px 0 78px}
+.hero h1{margin-top:18px}
+.hero-lead{margin-top:20px;color:#c4cfdb}
+.hero-pills{margin-top:22px}
+.hero-proof-note{margin:11px auto 0;color:#8fa3b8;font-size:12px;line-height:1.55}
+.hero-actions{margin-top:20px}
+.assessment-card{max-width:1100px;margin-top:38px}
+.assessment-head{padding:17px 22px;background:#0b1727}
+.assessment-head small{color:#93a4b7}
+.quick-form{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:22px}
+.quick-form label span em{font-style:normal;font:700 9px/1 'JetBrains Mono',monospace;color:#7f91a6}
+.quick-form input,.lead-card input{border-color:#26394f;background:#07111d}
+.quick-form input::placeholder,.lead-card input::placeholder{color:#71849a;opacity:1}
+.quick-proof{gap:10px;margin-top:4px}
+.quick-proof span{position:relative;padding:10px 11px 10px 31px;color:#c0ccda;background:#08131f;border-color:#26384d;line-height:1.45}
+.quick-proof span::before{content:'✓';position:absolute;left:11px;top:9px;color:var(--cyan);font-weight:800}
+.assessment-foot{margin-top:6px}
+.assessment-foot p{color:#93a6b9;font-size:12px;max-width:650px}
+.assessment-foot .btn{white-space:nowrap;flex:0 0 auto}
+.platform-strip{margin-top:40px}
+.platform-strip p{color:#7d90a5}
+.form-status{color:#8094a9}
+.hint{color:#7f91a6}
+
+@media(max-width:1120px){
+  .quick-form{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:980px){
+  .quick-form{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav-wrap{height:60px}
+}
+@media(max-width:700px){
+  .hero{padding-top:34px}
+  .assessment-card{margin-top:30px;border-radius:20px}
+  .quick-form{grid-template-columns:1fr;padding:18px}
+  .assessment-head{padding:16px 18px}
+  .assessment-foot p{font-size:11.5px}
+  .assessment-foot .btn{white-space:normal}
+}
+@media(max-width:390px){
+  .shell,.narrow{width:min(100% - 22px,var(--max))}
+  .truth-strip{font-size:9px;padding-inline:9px}
+  .hero h1{font-size:31px}
+  .hero-lead{font-size:14px;line-height:1.65}
+  .hero-pills span{font-size:11px}
+  .assessment-card{border-radius:18px}
+  .lead-card{padding:17px}
+}

@@ -57,7 +57,7 @@
         <a href="#pricing">Fiyatlandırma</a>
         <a href="#faq">SSS</a>
       </nav>
-      <a class="btn btn-primary nav-cta" href="#assessment">Ücretsiz Ön Değerlendirme</a>
+      <a class="btn btn-primary nav-cta" href="#assessment">Ücretsiz Değerlendirme</a>
       <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menüyü aç"><span></span><span></span><span></span></button>
     </div>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobil menü">
@@ -72,7 +72,7 @@
         <div class="eyebrow">✦ AI ARAMA GÖRÜNÜRLÜK TEŞHİSİ</div>
         <h1>Müşterileriniz Yapay Zekâya Sorduğunda <span>Sizi mi Öneriyor, Rakiplerinizi mi?</span></h1>
         <p class="hero-lead">Markanızın AI arama deneyimlerindeki görünürlüğünü ölçün; rakiplerin hangi sorgularda öne çıktığını, hangi doğrulanabilir kaynakların eksik olduğunu ve önce neyi düzeltmeniz gerektiğini kanıtlarla görün.</p>
-        <div class="hero-pills"><span>✓ 30+ ticari sorguya göre teşhis</span><span>✓ Kanıta dayalı rakip karşılaştırması</span><span>✓ Öncelikli düzeltme planı</span></div>
+        <div class="hero-pills"><span>✓ 30+ ticari sorguya göre teşhis</span><span>✓ Kanıta dayalı rakip karşılaştırması</span><span>✓ Öncelikli düzeltme planı</span></div><p class="hero-proof-note">Eksik veriyi tahmin etmiyoruz. Yalnızca doğrulanabilir sinyalleri raporluyoruz.</p>
         <div class="hero-actions"><a class="btn btn-primary" href="#assessment">Ücretsiz Ön Değerlendirme İste</a><a class="btn btn-secondary" href="#how">Nasıl Çalışır?</a></div>
 
         <div class="assessment-card" id="assessment">
@@ -82,11 +82,12 @@
             <span class="soft-badge">✓ Web sitesi zorunlu değil</span>
           </div>
           <form id="quick-form" class="quick-form">
-            <label><span>İşletme / Marka</span><input id="quick-brand" required autocomplete="organization" placeholder="Örn: Acme Coffee" /></label>
+            <label><span>İşletme / Marka</span><input id="quick-brand" required autocomplete="organization" placeholder="Örn: Moda Kahve" /></label>
             <label><span>Sektör / Kategori</span><input id="quick-category" required placeholder="Örn: Diş Kliniği" /></label>
             <label><span>Şehir</span><input id="quick-city" required autocomplete="address-level1" placeholder="Örn: İstanbul" /></label>
-            <div class="quick-proof"><span>✓ Ticari sorgu kapsamı belirlenir</span><span>✓ Aktif sağlayıcı kapsamı raporda belirtilir</span><span>✓ Eksik kanıt için tahmin üretilmez</span></div>
-            <div class="assessment-foot"><p>Bu alan canlı AI taraması başlatmaz. Bilgilerinizi ücretsiz ön değerlendirme talebine aktarır; gerçek ölçüm kapsamı değerlendirme sırasında netleştirilir.</p><button class="btn btn-primary" type="submit">Ücretsiz Ön Değerlendirmeye Geç →</button></div>
+            <label><span>Web Sitesi Adresi <em>OPSİYONEL</em></span><input id="quick-website" type="text" inputmode="url" autocomplete="url" placeholder="ornek.com" /><small class="hint">Web siteniz yoksa boş bırakabilirsiniz.</small></label>
+            <div class="quick-proof"><span>Sorgu kapsamı işletmenize göre belirlenir</span><span>Ölçülen AI kapsamı raporda açıkça gösterilir</span><span>Eksik veri için sonuç uydurulmaz</span></div>
+            <div class="assessment-foot"><p>Bilgileriniz yalnızca ücretsiz ön değerlendirme talebine aktarılır. Gerçek ölçüm kapsamı değerlendirme sırasında netleştirilir; bu sayfa canlı tarama başlatmaz.</p><button class="btn btn-primary" type="submit">Ücretsiz Ön Değerlendirmeye Geç →</button></div>
           </form>
         </div>
 
@@ -164,7 +165,7 @@
           <form id="lead-form" novalidate>
             <div class="form-grid two"><label><span>İşletme / Marka Adı *</span><input id="businessName" name="businessName" required autocomplete="organization" placeholder="Örn: Acme Coffee" /><small class="field-error" data-error="businessName"></small></label><label><span>Sektör / Kategori *</span><input id="category" name="category" required placeholder="Örn: Diş Kliniği" /><small class="field-error" data-error="category"></small></label></div>
             <div class="form-grid two"><label><span>Şehir *</span><input id="city" name="city" required autocomplete="address-level1" placeholder="Örn: İstanbul" /><small class="field-error" data-error="city"></small></label><label><span>İlçe <em>OPSİYONEL</em></span><input id="district" name="district" placeholder="Örn: Kadıköy" /></label></div>
-            <div class="form-grid two"><label><span>Web Sitesi <em>OPSİYONEL</em></span><input id="website" name="website" type="url" placeholder="https://ornek.com" /><small class="hint">Web sitesi zorunlu değildir.</small></label><label><span>E-posta *</span><input id="email" name="email" type="email" required autocomplete="email" placeholder="adiniz@sirketiniz.com" /><small class="field-error" data-error="email"></small></label></div>
+            <div class="form-grid two"><label><span>Web Sitesi Adresi <em>OPSİYONEL</em></span><input id="website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="ornek.com" /><small class="hint">Opsiyonel — web siteniz yoksa boş bırakabilirsiniz.</small><small class="field-error" data-error="website"></small></label><label><span>E-posta *</span><input id="email" name="email" type="email" required autocomplete="email" placeholder="adiniz@sirketiniz.com" /><small class="field-error" data-error="email"></small></label></div>
             <label><span>Ana Rakipler <em>OPSİYONEL</em></span><input id="competitors" name="competitors" placeholder="Rakip A, Rakip B" /></label>
             <label class="consent"><input id="kvkkConsent" type="checkbox" /><span><a href="./kvkk.html">KVKK Aydınlatma Metni</a> ve <a href="./privacy.html">Gizlilik Politikası</a>'nı okudum. Bilgilerimin ön değerlendirme talebimin işlenmesi ve benimle iletişim kurulması amacıyla kullanılmasını kabul ediyorum.</span></label><small class="field-error" data-error="kvkkConsent"></small>
             <div id="form-status" class="form-status" aria-live="polite">Kredi kartı gerekmez. Başvuru yalnızca ön değerlendirme talebidir; canlı denetim bu sayfada başlatılmaz.</div>
