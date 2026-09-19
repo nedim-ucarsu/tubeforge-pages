@@ -1,0 +1,125 @@
+from pathlib import Path
+
+root = Path("ai-visibility-radar")
+index = root / "index.html"
+app = root / "app.js"
+css = root / "styles.css"
+thanks = root / "thanks.html"
+
+html = index.read_text(encoding="utf-8")
+js = app.read_text(encoding="utf-8")
+style = css.read_text(encoding="utf-8")
+th = thanks.read_text(encoding="utf-8")
+
+old = """        <div class="lead-card">
+          <form id="lead-form" novalidate>"""
+new = """        <div class="lead-card">
+          <form id="lead-form" novalidate>"""
+if old not in html:
+    raise SystemExit("lead card marker missing")
+
+old2 = """          </form>
+        </div>
+      </div>
+    </section>"""
+new2 = """          </form>
+        </div>
+        <div id="submission-receipt" class="submission-receipt" hidden aria-live="polite">
+          <div class="receipt-head"><span class="eyebrow eyebrow-green">BAŞVURU ALINDI</span><span id="receipt-id" class="receipt-id"></span></div>
+          <h3>Ön değerlendirme talebiniz kayıt altına alındı.</h3>
+          <div class="receipt-grid">
+            <div><small>İşletme</small><strong id="receipt-brand">—</strong></div>
+            <div><small>E-posta</small><strong id="receipt-email">—</strong></div>
+            <div><small>Durum</small><strong>TALEP_ALINDI</strong></div>
+          </div>
+          <p class="receipt-note">Bu kayıt bir teslim alındı belgesidir; değerlendirme raporu değildir. GitHub Pages üzerindeki bu form şu anda AIVR ölçüm motorunu doğrudan çalıştırmaz.</p>
+        </div>
+      </div>
+    </section>"""
+if old2 not in html:
+    raise SystemExit("lead section end marker missing")
+html = html.replace(old2, new2, 1)
+
+old3 = """<div class="modal-dialog modal-small" role="dialog" aria-modal="true" aria-labelledby="thanks-title"><button class="modal-close" type="button" data-close-thanks aria-label="Pencereyi kapat">×</button><div class="success-icon">✓</div><h2 id="thanks-title">Talebiniz alındı.</h2><p id="thanks-copy">Ön değerlendirme talebiniz başarıyla iletildi.</p><div class="next-steps"><strong>Şimdi ne olacak?</strong><ol><li>İşletme, kategori ve lokasyon bilgileri incelenir.</li><li>Uygun sorgu ve sağlayıcı kapsamı belirlenir.</li><li>Sonraki adımlar e-posta adresinize iletilir.</li></ol></div><p class="disclaimer">Bu onay, canlı denetimin tamamlandığı veya belirli bir sonucun garanti edildiği anlamına gelmez.</p><div class="modal-footer"><button class="btn btn-secondary" data-close-thanks>Kapat</button><button class="btn btn-primary" data-thanks-report>Örnek Raporu İncele</button></div></div>"""
+new3 = """<div class="modal-dialog modal-small" role="dialog" aria-modal="true" aria-labelledby="thanks-title"><button class="modal-close" type="button" data-close-thanks aria-label="Pencereyi kapat">×</button><div class="success-icon">✓</div><h2 id="thanks-title">Talebiniz alındı.</h2><p id="thanks-copy">Ön değerlendirme talebiniz başarıyla iletildi.</p><div class="next-steps"><strong>Durum</strong><ol><li>Başvuru bilgileri kayıt altına alındı.</li><li>Bu aşamada otomatik AIVR denetimi başlatılmadı.</li><li>Gerçek değerlendirme raporu ancak ölçüm motoru çalıştırıldığında oluşturulur.</li></ol></div><p class="disclaimer">Bu onay bir değerlendirme raporu değildir ve canlı denetimin tamamlandığı anlamına gelmez.</p><div class="modal-footer"><button class="btn btn-secondary" data-close-thanks>Kapat</button><button class="btn btn-primary" data-thanks-report>Örnek Raporu İncele</button></div></div>"""
+if old3 not in html:
+    raise SystemExit("thanks modal marker missing")
+html = html.replace(old3, new3, 1)
+
+oldjs = """    const payload = {
+      _subject: `AIVR Ön Değerlendirme Talebi — ${qs('#businessName').value.trim()}`,
+      _template: 'table', _captcha: 'false',
+      'İşletme / Marka': qs('#businessName').value.trim(),"""
+newjs = """    const requestId = `AIVR-${new Date().toISOString().slice(0,10).replace(/-/g,'')}-${Math.random().toString(36).slice(2,8).toUpperCase()}`;
+    const sourceUrl = window.location.href.split('#')[0].split('?')[0];
+    const payload = {
+      _subject: `AIVR Ön Değerlendirme Talebi — ${qs('#businessName').value.trim()}`,
+      _template: 'table', _captcha: 'false',
+      _replyto: qs('#email').value.trim(),
+      'Talep ID': requestId,
+      'Sayfa Adresi': sourceUrl,
+      'İşletme / Marka': qs('#businessName').value.trim(),"""
+if oldjs not in js:
+    raise SystemExit("payload marker missing")
+js = js.replace(oldjs, newjs, 1)
+
+oldsuccess = """      status.className = 'form-status';
+      status.textContent = 'Kredi kartı gerekmez. Başvuru yalnızca ön değerlendirme talebidir; canlı denetim bu sayfada başlatılmaz.';
+      qs('#thanks-copy').innerHTML = `<strong>${escapeHtml(payload['İşletme / Marka'])}</strong> için ön değerlendirme talebiniz başarıyla iletildi. Sonraki adımlar <strong>${escapeHtml(payload['E-posta'])}</strong> adresine gönderilecek.`;
+      form.reset();
+      setSelectedPlan('Ücretsiz Ön Değerlendirme');
+      openModal(thanksModal);"""
+newsuccess = """      status.className = 'form-status';
+      status.textContent = `Talebiniz alındı. Talep ID: ${requestId}. Bu aşamada otomatik değerlendirme raporu üretilmedi.`;
+      qs('#thanks-copy').innerHTML = `<strong>${escapeHtml(payload['İşletme / Marka'])}</strong> için talebiniz alındı. Talep ID: <strong>${escapeHtml(requestId)}</strong>. Bu onay değerlendirme raporu değildir.`;
+      const receipt = qs('#submission-receipt');
+      if (receipt) {
+        qs('#receipt-id').textContent = requestId;
+        qs('#receipt-brand').textContent = payload['İşletme / Marka'];
+        qs('#receipt-email').textContent = payload['E-posta'];
+        receipt.hidden = false;
+      }
+      try {
+        sessionStorage.setItem('aivr-last-submission', JSON.stringify({
+          requestId,
+          brand: payload['İşletme / Marka'],
+          email: payload['E-posta'],
+          sourceUrl,
+          submittedAt: new Date().toISOString()
+        }));
+      } catch {}
+      form.reset();
+      setSelectedPlan('Ücretsiz Ön Değerlendirme');
+      openModal(thanksModal);
+      window.setTimeout(() => receipt?.scrollIntoView({ behavior:'smooth', block:'center' }), 350);"""
+if oldsuccess not in js:
+    raise SystemExit("success marker missing")
+js = js.replace(oldsuccess, newsuccess, 1)
+
+style += """
+.submission-receipt{margin-top:18px;padding:22px;border:1px solid rgba(52,211,153,.28);border-radius:20px;background:linear-gradient(135deg,rgba(16,185,129,.08),rgba(6,16,28,.96));box-shadow:0 18px 50px rgba(0,0,0,.18)}
+.submission-receipt[hidden]{display:none}
+.receipt-head{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.receipt-id{font:700 10px/1.4 'JetBrains Mono',monospace;color:#9ceee6}
+.submission-receipt h3{margin:14px 0 16px;font-size:20px}
+.receipt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.receipt-grid>div{padding:12px;border-radius:12px;background:#07101c;border:1px solid var(--line)}
+.receipt-grid small{display:block;color:#71849a;font-size:10px;margin-bottom:5px}
+.receipt-grid strong{display:block;color:#e7eef6;font-size:12px;overflow-wrap:anywhere}
+.receipt-note{margin:14px 0 0;color:#92a5b8;font-size:11.5px;line-height:1.65}
+@media(max-width:700px){.receipt-head{align-items:flex-start;flex-direction:column}.receipt-grid{grid-template-columns:1fr}}
+"""
+
+th = th.replace(
+    "Bilgileriniz ön değerlendirme için incelenecek. Uygun ölçüm kapsamı ve sonraki adımlar kayıtlı e-posta adresiniz üzerinden iletilecek.",
+    "Talebiniz kayıt altına alındı. Bu sayfa bir değerlendirme raporu üretmez; gerçek rapor ancak AIVR ölçüm motoru çalıştırıldığında oluşturulur."
+)
+th = th.replace(
+    "Bu onay, canlı denetimin tamamlandığı veya belirli bir sonucun garanti edildiği anlamına gelmez.",
+    "Bu onay yalnızca başvurunun alındığını gösterir; canlı denetimin tamamlandığı veya rapor üretildiği anlamına gelmez."
+)
+
+index.write_text(html, encoding="utf-8")
+app.write_text(js, encoding="utf-8")
+css.write_text(style, encoding="utf-8")
+thanks.write_text(th, encoding="utf-8")
