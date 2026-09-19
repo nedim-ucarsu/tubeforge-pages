@@ -2,30 +2,17 @@
   "product": "AI Visibility Radar",
   "public_product_version": "1.8.6.9",
   "capability_sync_date": "2026-09-19",
+  "deployment_surface": "static-github-pages",
   "capabilities": {
     "local_business_audit": true,
     "website_optional": true,
     "evidence_pending": true,
     "customer_reports": true,
-    "exports": [
-      "json",
-      "markdown",
-      "html",
-      "pdf"
-    ]
+    "exports": ["json", "markdown", "html", "pdf"]
   },
-  "lead_form": {
-    "required_fields": [
-      "Marka",
-      "Kategori",
-      "Sehir",
-      "email"
-    ],
-    "optional_fields": [
-      "Ilce",
-      "Web_Sitesi",
-      "Google_Isletme_Profili",
-      "Ana_Rakip"
-    ]
+  "public_site_behavior": {
+    "live_ai_audit_on_page": false,
+    "lead_form_delivery": "formsubmit_ajax",
+    "fictional_demo_data_labeled": true
   }
 }
