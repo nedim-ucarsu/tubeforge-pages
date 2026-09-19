@@ -7,28 +7,11 @@
     "website_optional": true,
     "evidence_pending": true,
     "customer_reports": true,
-    "report_center": true,
     "exports": [
       "json",
       "markdown",
       "html",
       "pdf"
-    ],
-    "zero_provider_calls_on_finalize": true,
-    "evidence_not_fabricated": true
-  },
-  "states": {
-    "audit": [
-      "AUDIT_IDLE",
-      "AUDIT_RUNNING"
-    ],
-    "evidence": [
-      "EVIDENCE_PENDING",
-      "EVIDENCE_COMPLETE"
-    ],
-    "report": [
-      "REPORT_READY",
-      "REPORT_ERROR"
     ]
   },
   "lead_form": {

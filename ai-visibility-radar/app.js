@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------
-  // 2. Interactive Product Demo Tabs (AUDIT, EVIDENCE, REPORT)
+  // 2. Interactive Product Demo Tabs (ÖLÇÜM, KANITLAR, RAPOR)
   // ------------------------------------------------------------
-  const demoTabs = document.querySelectorAll('.demo-tab');
-  const demoPanels = document.querySelectorAll('.demo-panel');
+  const demoTabs = Array.from(document.querySelectorAll('.demo-tab'));
+  const demoPanels = Array.from(document.querySelectorAll('.demo-panel'));
 
   if (demoTabs.length > 0 && demoPanels.length > 0) {
     function activateTab(targetTab) {
@@ -76,43 +76,99 @@ document.addEventListener('DOMContentLoaded', () => {
     demoTabs.forEach((tab, index) => {
       tab.addEventListener('click', () => activateTab(tab));
 
-      // Arrow navigation
+      // Arrow navigation + Home/End
       tab.addEventListener('keydown', (e) => {
         let newIndex = index;
         if (e.key === 'ArrowRight') {
           newIndex = (index + 1) % demoTabs.length;
         } else if (e.key === 'ArrowLeft') {
           newIndex = (index - 1 + demoTabs.length) % demoTabs.length;
+        } else if (e.key === 'Home') {
+          newIndex = 0;
+        } else if (e.key === 'End') {
+          newIndex = demoTabs.length - 1;
+        } else {
+          return;
         }
 
-        if (newIndex !== index) {
-          e.preventDefault();
-          demoTabs[newIndex].focus();
-          activateTab(demoTabs[newIndex]);
-        }
+        e.preventDefault();
+        demoTabs[newIndex].focus();
+        activateTab(demoTabs[newIndex]);
       });
     });
   }
 
   // ------------------------------------------------------------
-  // 3. Lead Form Safe Delivery & State Handling
+  // 3. Lead Form Safe Delivery & State Handling (IDLE, SENDING, SUCCESS, ERROR)
   // ------------------------------------------------------------
   const form = document.getElementById('audit-form');
   const statusEl = document.getElementById('form-status');
 
   if (form) {
     const inbox = ['upw', 'amzn', '@gmail.com'].join('');
-    form.action = 'https://formsubmit.co/' + inbox;
+    const formActionUrl = 'https://formsubmit.co/' + inbox;
+    const ajaxActionUrl = 'https://formsubmit.co/ajax/' + inbox;
+    form.action = formActionUrl;
 
-    form.addEventListener('submit', (e) => {
-      const submitBtn = form.querySelector('button[type="submit"]');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // State: SENDING
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Ön değerlendirme iletiliyor…';
+        submitBtn.textContent = 'Talebiniz gönderiliyor…';
       }
       if (statusEl) {
-        statusEl.textContent = 'Güvenli gönderim başlatıldı. Lütfen bekleyin…';
-        statusEl.style.color = 'var(--accent)';
+        statusEl.className = 'form-status status-sending';
+        statusEl.textContent = 'Talebiniz güvenli bağlantıyla iletiliyor. Lütfen bekleyin…';
+      }
+
+      try {
+        const formData = new FormData(form);
+        const dataObj = {};
+        formData.forEach((value, key) => {
+          dataObj[key] = value;
+        });
+
+        const response = await fetch(ajaxActionUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(dataObj)
+        });
+
+        if (response.ok) {
+          // State: SUCCESS
+          if (submitBtn) {
+            submitBtn.style.display = 'none';
+          }
+          if (statusEl) {
+            statusEl.className = 'form-status status-success';
+            statusEl.innerHTML = '<strong>Talebiniz alındı.</strong><br>Bilgileriniz ön değerlendirme için incelenecek. Sonuç ve sonraki adımlar e-posta üzerinden iletilecek.';
+          }
+          form.reset();
+        } else {
+          throw new Error('İletim hatası (HTTP ' + response.status + ')');
+        }
+      } catch (err) {
+        // State: ERROR
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Tekrar Deneyin';
+        }
+        if (statusEl) {
+          statusEl.className = 'form-status status-error';
+          statusEl.innerHTML = '<strong>Talebiniz şu anda iletilemedi.</strong> Lütfen tekrar deneyin veya doğrudan formu yeniden gönderin.';
+        }
       }
     });
   }

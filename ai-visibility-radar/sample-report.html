@@ -4,9 +4,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI Visibility Radar — Örnek Müşteri Teşhis Raporu. Kurgusal verilerle hazırlanmış temsili B2B görünürlük raporu." />
   <meta name="theme-color" content="#07111f" />
-  <title>Örnek Müşteri Teşhis Raporu — AI Visibility Radar</title>
-  <link rel="stylesheet" href="./styles.css?v=20260919-v1" />
+  <title>Örnek Teşhis Raporu — AI Visibility Radar</title>
+  <link rel="canonical" href="https://nedim-ucarsu.github.io/tubeforge-pages/ai-visibility-radar/sample-report.html" />
+  <link rel="stylesheet" href="./styles.css?v=20260919-final" />
 </head>
 <body>
   <a href="#main-report" class="skip-link">Rapor İçeriğine Atla</a>
@@ -19,7 +21,7 @@
       </a>
       <div style="display: flex; gap: 12px; align-items: center;">
         <a class="button secondary" style="min-height: 40px; padding: 0 16px; font-size: 13.5px;" href="./index.html">← Ana Sayfaya Dön</a>
-        <a class="nav-cta" href="./index.html#free-check">Ücretsiz Kontrol İste</a>
+        <a class="nav-cta" href="./index.html#free-check">Ücretsiz Değerlendirme İste</a>
       </div>
     </div>
   </header>
@@ -27,11 +29,11 @@
   <main id="main-report" class="shell" style="padding-top: 48px; padding-bottom: 84px;">
     <!-- Top Notice Pill -->
     <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-      <span class="badge badge-demo" style="font-size: 12px; padding: 6px 14px;">
-        ⚠️ TEMSİLİ / KURGUSAL VERİ — Gerçek müşteri ölçümü değildir.
+      <span class="badge badge-demo" style="font-size: 12.5px; padding: 7px 16px;">
+        ⚠️ TEMSİLİ RAPOR — Bu sayfadaki işletme ve ölçümler kurgusaldır. Gerçek müşteri sonucu değildir.
       </span>
       <span style="font-size: 13px; color: var(--text-subtle);">
-        Sürüm: AIVR v1.8.6.9 · Rapor İdempotent (0 Harici API Çağrısı)
+        Sürüm: AIVR v1.8.6.9 · Temsili Denetim Çıktısı
       </span>
     </div>
 
@@ -39,14 +41,14 @@
     <div class="report-header-box">
       <div class="report-badge-bar">
         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-          <span class="badge badge-ready" style="font-size: 12px; padding: 6px 14px;">REPORT_READY</span>
-          <span class="badge badge-version">ID: REP-2026-0919-CANONICAL</span>
+          <span class="badge badge-ready" style="font-size: 12px; padding: 6px 14px;">Rapor Hazır</span>
+          <span class="badge badge-version">Rapor No: REP-2026-0919-DEMO</span>
           <span class="badge badge-version">Tarih: 19.09.2026</span>
         </div>
 
         <!-- Export Toolbar Mockup -->
-        <div class="export-toolbar" role="toolbar" aria-label="Rapor Dışa Aktarım Araç Çubuğu">
-          <span style="font-size: 12px; color: var(--text-muted); margin-right: 4px;">Dışa Aktar:</span>
+        <div class="export-toolbar" role="toolbar" aria-label="Rapor Dışa Aktarım Formatları">
+          <span style="font-size: 12px; color: var(--text-muted); margin-right: 4px;">Dışa Aktarım Formatları:</span>
           <button class="export-btn" type="button" data-export="json">JSON</button>
           <button class="export-btn" type="button" data-export="markdown">Markdown</button>
           <button class="export-btn" type="button" data-export="html">HTML</button>
@@ -56,91 +58,87 @@
 
       <div id="export-notice" style="display: none; padding: 10px 14px; background: rgba(100, 228, 195, 0.1); border: 1px solid var(--accent); border-radius: var(--radius-sm); font-size: 13px; color: var(--accent); margin-bottom: 16px;"></div>
 
-      <div class="eyebrow">Müşteri Görünürlük Denetim Raporu</div>
-      <h1 style="font-size: clamp(32px, 4vw, 54px); margin: 8px 0 14px;">Örnek Sağlık &amp; Estetik Merkezi</h1>
-      <p class="lead-text" style="max-width: 820px; margin-bottom: 20px;">
-        Bu rapor, yapay zekâ modellerinin (ChatGPT, Google AI, Perplexity) ticari niyetli sorgularda işletmenizi neden önerip önermediğini,
-        hangi kaynak eksikliklerinin kör nokta yarattığını ve yapılması gereken öncelikli adımları somut kanıtlarla belgeler.
+      <div class="eyebrow">MÜŞTERİ TEŞHİS RAPORU</div>
+      <h1 style="font-size: clamp(30px, 4vw, 50px); margin: 8px 0 14px;">Örnek Sağlık &amp; Estetik Merkezi</h1>
+      <p class="lead-text" style="max-width: 840px; margin-bottom: 20px; color: var(--text-muted);">
+        Bu rapor; yapay zekâ sistemlerinde (ChatGPT, Google AI, Perplexity) ticari niyetli sorgularda markanızın görünürlük durumunu, rakiplerin öne çıkış nedenlerini ve kanıta dayalı öncelikli aksiyonları özetler.
       </p>
 
       <div style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 13.5px; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 16px;">
-        <div><strong>Sektör:</strong> Medikal Estetik</div>
+        <div><strong>Kategori:</strong> Medikal Estetik</div>
         <div><strong>Konum:</strong> İstanbul / Nişantaşı (Web Sitesi İsteğe Bağlı)</div>
-        <div><strong>Kanıt Durumu:</strong> <span style="color: var(--status-ready); font-weight: 700;">Eksiksiz (EVIDENCE_COMPLETE)</span></div>
-        <div><strong>Denetlenen Sorgu:</strong> 30 Benchmark Sorgusu</div>
+        <div><strong>Denetim Kanıtı:</strong> <span style="color: var(--status-ready); font-weight: 700;">%100 Tamamlandı</span></div>
+        <div><strong>Ölçülen Kapsam:</strong> 30 Benchmark Sorgusu</div>
       </div>
     </div>
 
-    <!-- 1. Executive Summary -->
+    <!-- 1. Executive Summary & Key Metrics -->
     <section class="section-dark" style="border-radius: var(--radius-xl); padding: 36px; margin-bottom: 36px; border: 1px solid var(--border);">
       <div class="section-heading left" style="margin-bottom: 28px;">
-        <span class="kicker">Özet Göstergeler</span>
-        <h2>Başlangıç Görünürlük &amp; Tavsiye Metrikleri</h2>
-        <p>AIVR V1 denetim motoru tarafından ölçülen ana performans sinyalleri.</p>
+        <span class="kicker">Yönetici Özeti</span>
+        <h2>Temel Görünürlük &amp; Tavsiye Metrikleri</h2>
+        <p>İşletmenin yapay zekâ cevaplarındaki mevcut konumu ve kaynak sinyalleri.</p>
       </div>
 
       <div class="exports-grid" style="margin-top: 0;">
         <div class="export-card">
-          <span class="export-tag">GÖRÜNME</span>
+          <span class="export-tag">AI GÖRÜNÜRLÜĞÜ</span>
           <div style="font-size: 38px; font-weight: 850; color: var(--text); line-height: 1.1; margin: 4px 0;">%23</div>
-          <p><strong>7 / 30 sorguda</strong> marka adı yapay zekâ cevabında anılıyor.</p>
+          <p><strong>7 / 30 ticari sorguda</strong> marka adı yapay zekâ yanıtlarında yer alıyor.</p>
         </div>
         <div class="export-card">
-          <span class="export-tag">ÖNERİLME</span>
+          <span class="export-tag">ÖNERİLME ORANI</span>
           <div style="font-size: 38px; font-weight: 850; color: var(--text); line-height: 1.1; margin: 4px 0;">%13</div>
-          <p><strong>4 / 30 sorguda</strong> doğrudan ilk tavsiye seçenekleri arasına giriyor.</p>
+          <p><strong>4 / 30 sorguda</strong> doğrudan tavsiye edilen seçenekler arasında sunuluyor.</p>
         </div>
         <div class="export-card">
-          <span class="export-tag">KAYNAK KAPSAMI</span>
+          <span class="export-tag">KAYNAK GÖRÜNÜRLÜĞÜ</span>
           <div style="font-size: 38px; font-weight: 850; color: var(--status-pending); line-height: 1.1; margin: 4px 0;">4 / 14</div>
-          <p>Yapay zekânın başvurduğu 14 bağımsız kaynağın yalnızca 4'ünde varsınız.</p>
+          <p>Yapay zekânın başvurduğu 14 bağımsız kaynağın yalnızca 4'ünde marka mevcut.</p>
         </div>
         <div class="export-card">
-          <span class="export-tag">KÖR NOKTALAR</span>
+          <span class="export-tag">GÖRÜNÜRLÜK KÖR NOKTASI</span>
           <div style="font-size: 38px; font-weight: 850; color: var(--status-error); line-height: 1.1; margin: 4px 0;">17 Sorgu</div>
-          <p>Rakiplerin önerildiği fakat markanızın tamamen bulunmadığı sorgu sayısı.</p>
+          <p>Rakiplerin önerildiği fakat markanın anılmadığı sorgu sayısı.</p>
         </div>
       </div>
     </section>
 
-    <!-- 2. Source Coverage & Gap Diagnosis -->
+    <!-- 2. Main Findings & Why Competitors Are Ahead -->
     <section class="section-dark" style="border-radius: var(--radius-xl); padding: 36px; margin-bottom: 36px; border: 1px solid var(--border);">
       <div class="section-heading left" style="margin-bottom: 28px;">
         <span class="kicker">Kök Neden Teşhisi</span>
-        <h2>Neden Görünürlük Düşük? Kanıt Temelli Bulgular.</h2>
-        <p>Genel geçer tavsiyeler yerine, ölçülen sorgulardan çıkarılan somut kök nedenler.</p>
+        <h2>Rakipler Neden Önde? Kanıta Dayalı Bulgular</h2>
+        <p>Genel varsayımlar yerine, ölçülen sorgulardan ve referans gösterilen kaynaklardan çıkarılan somut tespitler.</p>
       </div>
 
       <div class="exports-grid" style="margin-top: 0; grid-template-columns: 1fr 1fr;">
         <div class="export-card" style="border-left: 4px solid var(--status-error);">
-          <span class="badge badge-pending">YÜKSEK ETKİ</span>
-          <h3 style="margin-top: 6px;">1. Kaynak Kapsamı Açığı</h3>
+          <span class="badge badge-pending">ÖNCELİK: YÜKSEK</span>
+          <h3 style="margin-top: 6px;">1. Kaynak Görünürlüğü Açığı</h3>
           <p>
-            Rakipleriniz; DoktorTakvimi, SağlıkRehberi ve sektörel bağımsız değerlendirme platformlarında yer alırken işletmeniz bu listelerde bulunmuyor.
-            Yapay zekâ güvenilir bağımsız kaynak bulamadığı için markanızı önermiyor.
+            Bu denetimde düşük önerilme ile kaynak görünürlüğü açığı birlikte gözlendi. Rakipler bağımsız sektörel sağlık dizinlerinde ve yerel rehber platformlarında yer alırken, markanın bu kaynaklardaki eksikliği görünürlüğü etkileyebilecek başlıca faktörlerden biri olarak değerlendirildi.
           </p>
         </div>
         <div class="export-card" style="border-left: 4px solid var(--status-pending);">
-          <span class="badge badge-pending">ORTA ETKİ</span>
-          <h3 style="margin-top: 6px;">2. Yerel NAP &amp; Kimlik Uyuşmazlığı</h3>
+          <span class="badge badge-pending">ÖNCELİK: ORTA</span>
+          <h3 style="margin-top: 6px;">2. Yerel Kimlik &amp; İletişim Tutarsızlığı</h3>
           <p>
-            Harita kaydınızdaki telefon numarası ile web sitenizdeki ve sosyal profillerinizdeki adres bilgisi farklı formatlanmış.
-            Bu durum yapay zekânın konum doğrulaması yapmasını engelliyor.
+            Harita profili, web varlıkları ve sosyal profiller arasındaki adres ve telefon biçim farklılıkları, yapay zekâ motorlarının yerel varlığı teyit etmesini zorlaştıran bir sinyal açığı oluşturmaktadır.
           </p>
         </div>
         <div class="export-card" style="border-left: 4px solid var(--status-error);">
-          <span class="badge badge-pending">YÜKSEK ETKİ</span>
+          <span class="badge badge-pending">ÖNCELİK: YÜKSEK</span>
           <h3 style="margin-top: 6px;">3. Ticari Niyetli İçerik Boşluğu</h3>
           <p>
-            “Nişantaşı en iyi medikal estetik kliniği” ve “Lazer epilasyon fiyat karşılaştırması” gibi 9 yüksek niyetli sorguyu
-            doğrudan cevaplayan yapılandırılmış içerik veya sayfa bulunmuyor.
+            Müşterilerin doğrudan aradığı hizmet ve fiyat/yöntem karşılaştırması içeren 9 kritik sorguyu açık ve yapılandırılmış şekilde yanıtlayan bir bilgi kaynağının eksik olduğu tespit edildi.
           </p>
         </div>
         <div class="export-card" style="border-left: 4px solid var(--status-ready);">
-          <span class="badge badge-ready">DÜŞÜK ETKİ</span>
-          <h3 style="margin-top: 6px;">4. Teknik Tarama &amp; robots.txt</h3>
+          <span class="badge badge-ready">ÖNCELİK: DÜŞÜK</span>
+          <h3 style="margin-top: 6px;">4. Teknik Tarama ve Şema Verisi</h3>
           <p>
-            Yapay zekâ arama botlarının erişiminde kritik bir engel tespit edilmedi; ancak Schema.org MedicalBusiness işaretlemesi eksik.
+            Yapay zekâ botlarının genel erişiminde bir engel gözlenmedi; ancak yapılandırılmış şema verilerinin (Schema.org) eksikliği kurumsal kimlik tanımını zayıflatmaktadır.
           </p>
         </div>
       </div>
@@ -149,74 +147,74 @@
     <!-- 3. Observed Gaps & Blindspots -->
     <section class="section-dark" style="border-radius: var(--radius-xl); padding: 36px; margin-bottom: 36px; border: 1px solid var(--border);">
       <div class="section-heading left" style="margin-bottom: 24px;">
-        <span class="kicker">Görünürlük Kör Noktaları</span>
-        <h2>Rakiplerin Önerildiği, Markanın Kaybolduğu Örnek Sorgular</h2>
-        <p>Gerçek denetimde tespit edilen doğrudan rekabet açıkları.</p>
+        <span class="kicker">Kör Nokta Sorguları</span>
+        <h2>Rakiplerin Önerildiği, Markanın Yer Almadığı Örnek Sorgular</h2>
+        <p>Denetimde kaydedilen somut rekabet açığı gözlemleri.</p>
       </div>
 
       <div style="display: grid; gap: 14px;">
         <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px 22px;">
-          <strong style="color: var(--text); font-size: 15px;">“İstanbul Avrupa yakasında en güvenilir estetik klinikleri hangileri?”</strong>
+          <strong style="color: var(--text); font-size: 15px;">“İstanbul Avrupa yakasında güvenilir medikal estetik merkezleri”</strong>
           <div style="margin-top: 6px; font-size: 13.5px; color: var(--text-muted);">
-            <span style="color: var(--status-error); font-weight: 700;">Durum:</span> Marka yok · <strong>Rakip A</strong> ve <strong>Rakip B</strong> ilk 3 sırada öneriliyor · 4 bağımsız rehber kaynak gösterilmiş.
+            <span style="color: var(--status-error); font-weight: 700;">Gözlem:</span> Marka yanıtta yer almadı · <strong>Rakip A</strong> ve <strong>Rakip B</strong> ilk 3 sırada önerildi · 4 bağımsız sektörel rehber kaynak olarak referans verildi.
           </div>
         </div>
         <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px 22px;">
           <strong style="color: var(--text); font-size: 15px;">“Nişantaşı medikal estetik ve cilt bakımı tavsiyesi”</strong>
           <div style="margin-top: 6px; font-size: 13.5px; color: var(--text-muted);">
-            <span style="color: var(--status-pending); font-weight: 700;">Durum:</span> Marka metin içinde alternatif olarak geçiyor fakat tavsiye listesine dahil edilmiyor.
+            <span style="color: var(--status-pending); font-weight: 700;">Gözlem:</span> Marka metin içinde alternatif bir seçenek olarak geçti, ancak doğrudan tavsiye listesine dahil edilmedi.
           </div>
         </div>
         <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px 22px;">
-          <strong style="color: var(--text); font-size: 15px;">“Dolgu ve botoks uygulamalarında fiyat/performans seçenekleri”</strong>
+          <strong style="color: var(--text); font-size: 15px;">“Medikal estetik uygulamalarında fiyat ve uzmanlık karşılaştırması”</strong>
           <div style="margin-top: 6px; font-size: 13.5px; color: var(--text-muted);">
-            <span style="color: var(--status-error); font-weight: 700;">Durum:</span> Marka yok · <strong>Rakip C</strong> ve yerel tıp merkezi öne çıkıyor.
+            <span style="color: var(--status-error); font-weight: 700;">Gözlem:</span> Marka bulunmuyor · <strong>Rakip C</strong> bağımsız yorum platformlarındaki yüksek kaynak varlığıyla öne çıkıyor.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. Action Plan / Remedy -->
+    <!-- 4. Action Plan / Prioritized Remediation -->
     <section class="section-dark" style="border-radius: var(--radius-xl); padding: 36px; margin-bottom: 36px; border: 1px solid var(--border);">
       <div class="section-heading left" style="margin-bottom: 24px;">
-        <span class="kicker">Öncelikli Aksiyon Planı</span>
+        <span class="kicker">Öncelikli Aksiyonlar</span>
         <h2>Uygulanabilir Düzeltme Reçetesi</h2>
-        <p>Her madde somut kanıta, önceliğe ve beklenen görünürlük sinyaline bağlanmıştır.</p>
+        <p>Her madde somut kanıta, uygulama önceliğine ve hedeflenen görünürlük sinyaline bağlanmıştır.</p>
       </div>
 
       <div class="pipeline-flow" style="margin: 0; grid-template-columns: repeat(2, 1fr);">
         <div class="pipeline-card">
           <span class="pipeline-step-num">ÖNCELİK 01</span>
-          <h3>Bağımsız Otorite Kaynaklarında Profil Doğrulama</h3>
-          <p>Rakipleri öneren 10 bağımsız sağlık dizininde resmi profil oluşturulması ve hasta geri bildirimlerinin senkronize edilmesi.</p>
+          <h3>Bağımsız Otorite Kaynaklarında Profil Oluşturma</h3>
+          <p>Yapay zekânın başvurduğu bağımsız sektörel sağlık dizinleri ve rehber platformlarda resmi işletme profillerinin doğrulanması.</p>
         </div>
         <div class="pipeline-card">
           <span class="pipeline-step-num">ÖNCELİK 02</span>
-          <h3>Yerel NAP ve Schema.org Standardizasyonu</h3>
-          <p>Adres, telefon, çalışma saatleri ve hizmet alanlarının Google İşletme Profili ve web varlıklarında tam tutarlı hale getirilmesi.</p>
+          <h3>Yerel Kimlik ve NAP Bilgisi Standardizasyonu</h3>
+          <p>Adres, telefon ve çalışma saatlerinin harita profili, web sayfası ve tüm dijital kanallarda birebir tutarlı hale getirilmesi.</p>
         </div>
         <div class="pipeline-card">
           <span class="pipeline-step-num">ÖNCELİK 03</span>
-          <h3>Kör Nokta Sorguları İçin Hedef Sayfalar</h3>
-          <p>Yapay zekânın yanıtlarında doğrudan alıntılayabileceği, soru-cevap formatında 9 yüksek ticari niyetli içerik üretimi.</p>
+          <h3>Kör Nokta Sorguları İçin Cevap İçerikleri</h3>
+          <p>Yapay zekâ sistemlerinin doğrudan yanıt olarak alıntılayabileceği, soru-cevap yapısında 9 yüksek ticari niyetli içeriğin kurgulanması.</p>
         </div>
         <div class="pipeline-card">
           <span class="pipeline-step-num">ÖNCELİK 04</span>
           <h3>Aynı 30 Sorguyla Yeniden Ölçüm</h3>
-          <p>Düzeltmeler devreye alındıktan 30 gün sonra aynı sorgu setiyle ikinci denetimin yapılarak değişimin doğrulanması.</p>
+          <p>Düzeltmeler devreye alındıktan sonra, rastgele sorgularla değil, ilk ölçümde kullanılan aynı benchmark sorgu setiyle değişimin doğrulanması.</p>
         </div>
       </div>
     </section>
 
-    <!-- 5. Before / After Projection -->
+    <!-- 5. Before / After Methodology -->
     <section class="section-dark" style="border-radius: var(--radius-xl); padding: 36px; margin-bottom: 48px; border: 1px solid var(--border);">
       <div class="section-heading left" style="margin-bottom: 24px;">
-        <span class="kicker">Beklenen Değişim</span>
-        <h2>Düzeltme Sonrası Öngörülen Önce / Sonra Tablosu</h2>
-        <p>Aynı sorgu ailesiyle yeniden ölçüldüğünde hedeflenen sinyal gelişimi.</p>
+        <span class="kicker">Yeniden Ölçüm Metodolojisi</span>
+        <h2>Temsili Yeniden Ölçüm Karşılaştırması</h2>
+        <p>Aynı sorgu setiyle yeniden ölçüm yapıldığında izlenen hedef sinyal gelişimi.</p>
       </div>
 
-      <div class="proof-table" role="table" aria-label="Örnek Önce Sonra Tablosu">
+      <div class="proof-table" role="table" aria-label="Temsili Önce ve Sonra Karşılaştırma Tablosu">
         <div class="proof-row proof-head" role="row">
           <span>Metrik</span>
           <span>Önce</span>
@@ -248,7 +246,15 @@
           <em>-9 açık kapatıldı</em>
         </div>
       </div>
-      <p class="illustrative center">Kurgusal simülasyondur. Gerçek müşteri sonuçları denetim sonrası yeniden ölçülerek kesinleşir.</p>
+      <p class="illustrative center">
+        Temsili örnektir. Belirli bir sıralama veya görünürlük garantisi verilmez. Gerçek sonuçlar işletmeye, sektöre ve zamana göre değişir.
+      </p>
+    </section>
+
+    <!-- 6. Technical Information Box (Subordinated) -->
+    <section style="background: rgba(15, 29, 49, 0.4); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 48px; font-size: 13px; color: var(--text-subtle);">
+      <strong style="color: var(--text-muted); display: block; margin-bottom: 6px;">Teknik Bilgi</strong>
+      Rapor Durumu: REPORT_READY · Kanıt Doğrulama: EVIDENCE_COMPLETE (%100 kanıt yeterliliği) · Veri Yapısı: İdempotent yerel sentez · Desteklenen Çıktılar: JSON, Markdown, HTML, PDF.
     </section>
 
     <!-- CTA Box -->
@@ -257,24 +263,49 @@
         <span class="kicker">Kendi İşletmeniz İçin</span>
         <h2 style="margin: 8px 0 12px;">Yapay zekâ sizin sektörünüzde kimi öneriyor?</h2>
         <p style="margin: 0; color: var(--text-muted);">
-          Ücretsiz ön görünürlük kontrolüyle markanızın yapay zekâdaki durumunu ve ilk sinyallerini öğrenin.
+          Ücretsiz ön değerlendirme talebinde bulunun; işletmeniz için ilk görünürlük sinyallerini birlikte inceleyelim.
         </p>
       </div>
       <div style="display: flex; align-items: center; justify-content: flex-end;">
-        <a class="button primary" href="./index.html#free-check">Ücretsiz Görünürlük Kontrolü İste</a>
+        <a class="button primary" href="./index.html#free-check">Ücretsiz Ön Değerlendirme İste</a>
       </div>
     </div>
   </main>
 
   <footer class="footer shell">
-    <div class="brand">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>AI Visibility Radar</span>
+    <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 32px;">
+      <div>
+        <div class="brand" style="margin-bottom: 8px;">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>AI Visibility Radar</span>
+        </div>
+        <p style="font-size: 13.5px; color: var(--text-muted);">Yapay zekâ sistemlerinde marka görünürlüğü ve tavsiye analizi.</p>
+        <p class="fine" style="margin-top: 8px;">Sürüm: AIVR v1.8.6.9</p>
+      </div>
+      <div>
+        <strong style="color: var(--text); font-size: 14px; display: block; margin-bottom: 10px;">Sayfalar</strong>
+        <div style="display: grid; gap: 6px; font-size: 13px;">
+          <a href="./index.html#what">Ürün</a>
+          <a href="./index.html#how">Nasıl Çalışır</a>
+          <a href="./sample-report.html" style="color: var(--accent);">Örnek Rapor</a>
+          <a href="./index.html#pricing">Fiyatlandırma</a>
+          <a href="./index.html#faq">SSS</a>
+        </div>
+      </div>
+      <div>
+        <strong style="color: var(--text); font-size: 14px; display: block; margin-bottom: 10px;">Yasal</strong>
+        <div style="display: grid; gap: 6px; font-size: 13px;">
+          <a href="./privacy.html">Gizlilik Politikası</a>
+          <a href="./kvkk.html">KVKK Aydınlatma Metni</a>
+          <a href="./terms.html">Kullanım Koşulları</a>
+        </div>
+      </div>
     </div>
-    <p>Temsili Müşteri Teşhis Raporu · Gerçek müşteri verisi veya garantili sıralama içermez.</p>
-    <p class="fine">AI Visibility Radar v1.8.6.9 · <a href="./index.html" style="color: var(--accent);">Ana Sayfa</a></p>
+    <p class="fine" style="border-top: 1px solid var(--border-subtle); padding-top: 20px;">
+      Temsili Müşteri Teşhis Raporu · Belirli bir sıralama veya tavsiye garantisi içermez · v1.8.6.9
+    </p>
   </footer>
 
-  <script src="./app.js?v=20260919-v1"></script>
+  <script src="./app.js?v=20260919-final"></script>
 </body>
 </html>
