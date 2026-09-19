@@ -128,9 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
     status.className = 'form-status sending';
     status.textContent = 'Talebiniz güvenli bağlantıyla iletiliyor…';
     const inbox = ['upw','amzn','@gmail.com'].join('');
+    const requestId = `AIVR-${new Date().toISOString().slice(0,10).replace(/-/g,'')}-${Math.random().toString(36).slice(2,8).toUpperCase()}`;
+    const sourceUrl = window.location.href.split('#')[0].split('?')[0];
     const payload = {
       _subject: `AIVR Ön Değerlendirme Talebi — ${qs('#businessName').value.trim()}`,
       _template: 'table', _captcha: 'false',
+      _replyto: qs('#email').value.trim(),
+      'Talep ID': requestId,
+      'Sayfa Adresi': sourceUrl,
       'İşletme / Marka': qs('#businessName').value.trim(),
       'Sektör / Kategori': qs('#category').value.trim(),
       'Şehir': qs('#city').value.trim(),
@@ -146,11 +151,28 @@ document.addEventListener('DOMContentLoaded', () => {
       const response = await fetch(`https://formsubmit.co/ajax/${inbox}`, { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify(payload) });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       status.className = 'form-status';
-      status.textContent = 'Kredi kartı gerekmez. Başvuru yalnızca ön değerlendirme talebidir; canlı denetim bu sayfada başlatılmaz.';
-      qs('#thanks-copy').innerHTML = `<strong>${escapeHtml(payload['İşletme / Marka'])}</strong> için ön değerlendirme talebiniz başarıyla iletildi. Sonraki adımlar <strong>${escapeHtml(payload['E-posta'])}</strong> adresine gönderilecek.`;
+      status.textContent = `Talebiniz alındı. Talep ID: ${requestId}. Bu aşamada otomatik değerlendirme raporu üretilmedi.`;
+      qs('#thanks-copy').innerHTML = `<strong>${escapeHtml(payload['İşletme / Marka'])}</strong> için talebiniz alındı. Talep ID: <strong>${escapeHtml(requestId)}</strong>. Bu onay değerlendirme raporu değildir.`;
+      const receipt = qs('#submission-receipt');
+      if (receipt) {
+        qs('#receipt-id').textContent = requestId;
+        qs('#receipt-brand').textContent = payload['İşletme / Marka'];
+        qs('#receipt-email').textContent = payload['E-posta'];
+        receipt.hidden = false;
+      }
+      try {
+        sessionStorage.setItem('aivr-last-submission', JSON.stringify({
+          requestId,
+          brand: payload['İşletme / Marka'],
+          email: payload['E-posta'],
+          sourceUrl,
+          submittedAt: new Date().toISOString()
+        }));
+      } catch {}
       form.reset();
       setSelectedPlan('Ücretsiz Ön Değerlendirme');
       openModal(thanksModal);
+      window.setTimeout(() => receipt?.scrollIntoView({ behavior:'smooth', block:'center' }), 350);
     } catch (err) {
       status.className = 'form-status error';
       status.textContent = 'Talebiniz şu anda iletilemedi. Lütfen bağlantınızı kontrol edip tekrar deneyin.';
